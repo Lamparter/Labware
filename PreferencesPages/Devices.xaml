@@ -8,7 +8,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel Padding="10,0,0,0">
+        <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE772;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock Text="Devices" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+        </Grid>
+        <StackPanel Padding="10,48,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="700">
                 <TextBlock Text="Removable media" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
                 <TextBlock Text="The Autorun feature on the host opens and runs CDs and DVDs automatically when you insert them in the host CD/DVD drive. Autorun can cause unexpected behavior in virtual machines." HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,32,0,0" Width="500" FontSize="16"/>

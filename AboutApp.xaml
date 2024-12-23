@@ -13,7 +13,7 @@
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="Base" />
+        <MicaBackdrop Kind="BaseAlt" />
     </Window.SystemBackdrop>
 
     <Page>
@@ -112,25 +112,16 @@
                 </winex:TitleBar.IconSource>
             </winex:TitleBar>
             <Grid
-                Margin="12,32,0,0"
+                Margin="12,0,0,0"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Top">
+                VerticalAlignment="Center">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <StackPanel>
+                    <StackPanel Margin="0,2,0,0" VerticalAlignment="Center">
                         <Image
                             Width="64"
                             Height="64"
                             VerticalAlignment="Center"
-                            Source="ms-appx:///Assets/Square44x44Logo.png" />
-                        <TextBlock
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Top"
-                            FontSize="24"
-                            FontWeight="SemiBold"
-                            Style="{StaticResource CaptionTextBlockStyle}"
-                            Text="Product Information" />
-                    </StackPanel>
-                    <StackPanel Margin="0,2,0,0" VerticalAlignment="Center">
+                            Source="ms-appx:///Assets/StoreLogo.png" />
                         <TextBlock
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"
@@ -143,7 +134,7 @@
                             VerticalAlignment="Top"
                             FontSize="16"
                             Style="{StaticResource CaptionTextBlockStyle}"
-                            Text="0.1 Preview" />
+                            Text="0.2 Preview" />
                         <TextBlock
                             x:Name="CompileDate"
                             HorizontalAlignment="Center"
@@ -154,7 +145,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel
-                    Margin="0,132,0,0"
+                    Margin="0,100,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top">
                     <StackPanel
@@ -200,36 +191,10 @@
                     Margin="0,0,10,10"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
-                    BorderThickness="2,2,2,2"
                     Click="OKButton_Click"
                     Content="OK"
                     IsTabStop="False"
-                    UseSystemFocusVisuals="False">
-                    <Button.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}" />
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}" />
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}" />
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}" />
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White" />
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}" />
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}" />
-                                </ResourceDictionary>
-                                <ResourceDictionary x:Key="Light">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}" />
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}" />
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}" />
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}" />
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black" />
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}" />
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}" />
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </Button.Resources>
-                </Button>
+                    UseSystemFocusVisuals="False"/>
             </Grid>
         </Grid>
     </Page>

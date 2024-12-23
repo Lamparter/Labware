@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace VMsApp.NewVMWizardPages
         {
             if (this.OtherOS.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(NameVirtualMachine));
+                this.Frame.Navigate(typeof(NameVirtualMachine), null, new SuppressNavigationTransitionInfo());
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)

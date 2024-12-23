@@ -15,32 +15,102 @@
     <Window.SystemBackdrop>
         <MicaBackdrop Kind="Base"/>
     </Window.SystemBackdrop>
+    <Page>
+        <Page.Resources>
+            <ResourceDictionary>
+                <MenuFlyout
+               x:Name="TitlebarMenuFlyout"
+               x:FieldModifier="public"
+               Placement="BottomEdgeAlignedLeft">
 
-    <Grid>
-        <Grid x:Name="NewVMWizardTitleBar" Height="40" VerticalAlignment="Top" Background="Transparent">
-            <StackPanel x:Name="TitleBar" Orientation="Horizontal">
-                <Border             
-Height="40"
-Margin="12,2,0,0"
-VerticalAlignment="Top"
-Background="Transparent"
-Canvas.ZIndex="1"
-IsHitTestVisible="True"
-RelativePanel.AlignLeftWithPanel="True"
-RelativePanel.AlignRightWithPanel="True">
-                    <StackPanel Orientation="Horizontal" Width="Auto">
-                        <FontIcon Glyph="&#xECC8;" Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,2,0,0"/>
-                        <TextBlock
-        x:Name="PreferencesWindowTitle"
-        Margin="12,2,4,0"
-        VerticalAlignment="Center"
-        Text="New Virtual Machine Wizard"
-        FontSize="12"
-        FontWeight="Normal" Foreground="{ThemeResource SystemAccentColor}"/>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnRestoreClicked}"
+                   IsEnabled="False"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Text="Restore"
+                   UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE923;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnMoveClicked}"
+                   IsEnabled="{x:Bind IsWindowMaximized.Equals(x:False), Mode=OneWay}"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Tag="{x:Bind TitlebarMenuFlyout}"
+                   Text="Move"
+                   UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnSizeClicked}"
+                   IsEnabled="False"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Tag="{x:Bind TitlebarMenuFlyout}"
+                   Text="Size"
+                   UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnMinimizeClicked}"
+                   IsEnabled="False"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Text="Minimize"
+                   UseSystemFocusVisuals="False">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE921;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnMaximizeClicked}"
+                   IsEnabled="False"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Text="Maximize"
+                   UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE922;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutSeparator Width="200" />
+
+                    <MenuFlyoutItem
+                   Click="{x:Bind OnCloseClicked}"
+                   IsTabStop="False"
+                   Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                   Text="Close"
+                   UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE8BB;" />
+                        </MenuFlyoutItem.Icon>
+
+                        <MenuFlyoutItem.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="F4" Modifiers="Menu" />
+                        </MenuFlyoutItem.KeyboardAccelerators>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </ResourceDictionary>
+        </Page.Resources>
+        <Grid>
+            <winex:TitleBar
+                x:Name="NewVMWizardTitleBar"
+                Title="New Virtual Machine Wizard"
+                Height="32"
+                VerticalAlignment="Top"
+                Background="Transparent">
+                <winex:TitleBar.IconSource>
+                    <FontIconSource Glyph="&#xECC8;"/>
+                </winex:TitleBar.IconSource>
+            </winex:TitleBar>
+            <Frame x:Name="ContentFrame" Margin="0,32,0,0"/>
         </Grid>
-        <Frame x:Name="ContentFrame" Margin="0,40,0,0"/>
-    </Grid>
+    </Page>
 </winex:WindowEx>

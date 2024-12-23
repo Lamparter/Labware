@@ -13,46 +13,117 @@
     Title="Message Log">
     
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="Base"/>
+        <MicaBackdrop Kind="BaseAlt"/>
     </Window.SystemBackdrop>
+    
+    <Page>
+        <Page.Resources>
+            <ResourceDictionary>
+                <MenuFlyout
+                x:Name="TitlebarMenuFlyout"
+                x:FieldModifier="public"
+                Placement="BottomEdgeAlignedLeft">
 
-    <Grid>
-        <Grid x:Name="MessageLogTitleBar" Height="40" VerticalAlignment="Top" Background="Transparent">
-            <StackPanel x:Name="TitleBar" Orientation="Horizontal">
-                <Border             
-Height="40"
-Margin="12,2,0,0"
-VerticalAlignment="Top"
-Background="Transparent"
-Canvas.ZIndex="1"
-IsHitTestVisible="True"
-RelativePanel.AlignLeftWithPanel="True"
-RelativePanel.AlignRightWithPanel="True">
-                    <StackPanel Orientation="Horizontal" Width="Auto">
-                        <FontIcon Glyph="&#xE15F;" Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,2,0,0"/>
-                        <TextBlock
-        x:Name="MessageLogWindowTitle"
-        Margin="12,2,4,0"
-        VerticalAlignment="Center"
-        Text="Message Log"
-        FontSize="12"
-        FontWeight="Normal" Foreground="{ThemeResource SystemAccentColor}"/>
-                    </StackPanel>
-                </Border>
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnRestoreClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Restore"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE923;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMoveClicked}"
+                    IsEnabled="{x:Bind IsWindowMaximized.Equals(x:False), Mode=OneWay}"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Tag="{x:Bind TitlebarMenuFlyout}"
+                    Text="Move"
+                    UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnSizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Tag="{x:Bind TitlebarMenuFlyout}"
+                    Text="Size"
+                    UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMinimizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Minimize"
+                    UseSystemFocusVisuals="False">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE921;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMaximizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Maximize"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE922;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutSeparator Width="200" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnCloseClicked}"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Close"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE8BB;" />
+                        </MenuFlyoutItem.Icon>
+
+                        <MenuFlyoutItem.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="F4" Modifiers="Menu" />
+                        </MenuFlyoutItem.KeyboardAccelerators>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </ResourceDictionary>
+        </Page.Resources>
+        <Grid>
+            <winex:TitleBar
+                x:Name="MessageLogTitleBar"
+                Title="Message Log"
+                Height="32"
+                VerticalAlignment="Top"
+                Background="Transparent">
+                <winex:TitleBar.IconSource>
+                    <FontIconSource Glyph="&#xE15F;"/>
+                </winex:TitleBar.IconSource>
+            </winex:TitleBar>
+            <TextBlock Text="Summary" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,52,0,0"/>
+            <TextBlock Text="Time" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,52,0,0"/>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Message Logs are not available" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,0,0,32">
+                <Button x:Name="RemoveButton" Margin="5,0,5,0" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Right" UseSystemFocusVisuals="False"/>
+                <Button x:Name="RemoveAllButton" Margin="0,0,5,0" Content="Remove All" VerticalAlignment="Center" HorizontalAlignment="Right" UseSystemFocusVisuals="False"/>
             </StackPanel>
+            <Border Grid.Row="1" VerticalAlignment="Bottom" Height="32">
+                <TextBlock Text="No unread messages" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
+            </Border>
         </Grid>
-        <TextBlock Text="Summary" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,52,0,0"/>
-        <TextBlock Text="Time" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,52,0,0"/>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock Text="Message Logs are not available" Style="{StaticResource CaptionTextBlockStyle}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0"/>
-        </Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,0,0,32">
-            <Button x:Name="RemoveButton" Margin="0,0,5,0" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Right" UseSystemFocusVisuals="False"/>
-            <Button x:Name="RemoveAllButton" Margin="0,0,5,0" Content="Remove All" VerticalAlignment="Center" HorizontalAlignment="Right" UseSystemFocusVisuals="False"/>
-        </StackPanel>
-        <Border Grid.Row="1" VerticalAlignment="Bottom" Height="32">
-            <TextBlock Text="No unread messages" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="11,0,0,0"/>
-        </Border>
-    </Grid>
+    </Page>
 </winex:WindowEx>

@@ -25,62 +25,8 @@
             </ComboBox>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" FontSize="16" Margin="0,0,10,0" BorderThickness="2" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
-            <Button x:Name="NextButton" FontSize="16" Content="Next" BorderThickness="2" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                            </ResourceDictionary>
-                            <ResourceDictionary x:Key="Light">
-                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
+            <Button x:Name="BackButton" FontSize="16" Margin="0,0,10,0" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
+            <Button x:Name="NextButton" FontSize="16" Content="Next" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

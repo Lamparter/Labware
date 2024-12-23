@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,11 @@ namespace VMsApp.NewVMWizardPages
         {
             if (this.TypicalRadioButton.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(Installation));
+                this.Frame.Navigate(typeof(Installation), null, new SuppressNavigationTransitionInfo());
             }
             if (this.CustomRadioButton.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(Compatibility));
+                this.Frame.Navigate(typeof(Compatibility), null, new SuppressNavigationTransitionInfo());
             }
         }
     }

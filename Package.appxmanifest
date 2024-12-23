@@ -10,7 +10,7 @@
   <Identity
     Name="VMsApp"
     Publisher="CN=Alloyd"
-    Version="0.1.0.0" />
+    Version="0.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="e802ab30-b0b0-4bbe-8d18-d1f36e500044" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

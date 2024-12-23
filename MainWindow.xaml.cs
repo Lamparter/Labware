@@ -12,13 +12,14 @@ using System.Runtime.InteropServices;
 using Microsoft.UI.Content;
 using System.ComponentModel;
 using VMsApp.PInvoke.Comctl32;
-using Microsoft.UI.Xaml.Media;
 using VMsApp.PInvoke.User32;
 using VMsApp.Helpers;
 using Windows.Foundation;
 using Microsoft.UI;
 using Windows.UI;
 using VMsApp.PInvoke.Uxtheme;
+using WinRT.Interop;
+using Microsoft.UI.Xaml.Media;
 
 namespace VMsApp
 {
@@ -51,9 +52,10 @@ namespace VMsApp
             AppWindow.Resize(new SizeInt32(1200, 700));
             this.CenterOnScreen();
             SetTitleBar(AppTitleBar);
+            AppWindow.TitleBar.PreferredHeightOption = TitleBarHeightOption.Tall;
 
             FolderView.Visibility = Visibility.Collapsed;
-            TabsGrid.Margin = new Thickness(201, 80, 0, 32);
+            TabsGrid.Margin = new Thickness(212, 48, 0, 32);
 
             if (ShowHideLibrary.IsChecked == false)
             {
@@ -129,13 +131,14 @@ namespace VMsApp
 
             UxthemeLibrary.FlushMenuThemes();
         }
+        private const string MaximizeGlyph = "\uE923";
+        private const string RestoreGlyph = "\uE922";
         private void OnSizeChanged(object sender, WindowSizeChangedEventArgs args)
         {
             if (TitlebarMenuFlyout.IsOpen)
             {
                 TitlebarMenuFlyout.Hide();
             }
-
             if (overlappedPresenter is not null)
             {
                 IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
@@ -290,7 +293,7 @@ namespace VMsApp
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             LibraryPanel.Visibility = Visibility.Collapsed;
-            TabsGrid.Margin = new Thickness(0, 80, 0, 32);
+            TabsGrid.Margin = new Thickness(0, 48, 0, 32);
             FolderView.Margin = new Thickness(0, 0, 0, 32);
 
             if (ShowHideLibrary.IsChecked == true)
@@ -320,14 +323,14 @@ namespace VMsApp
             if (LibraryPanel.Visibility == Visibility.Visible)
             {
                 LibraryPanel.Visibility = Visibility.Collapsed;
-                TabsGrid.Margin = new Thickness(0, 80, 0, 32);
+                TabsGrid.Margin = new Thickness(0, 48, 0, 32);
                 FolderView.Margin = new Thickness(0, 0, 0, 32);
                 ShowHideLibrary.IsChecked = false;
             }
             else
             {
                 LibraryPanel.Visibility = Visibility.Visible;
-                TabsGrid.Margin = new Thickness(201, 80, 0, 32);
+                TabsGrid.Margin = new Thickness(212, 48, 0, 32);
                 FolderView.Margin = new Thickness(202, 0, 0, 32);
                 ShowHideLibrary.IsChecked = true;
             }

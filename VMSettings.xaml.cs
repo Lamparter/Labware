@@ -3,28 +3,16 @@ using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
-using Microsoft.UI.Xaml.Navigation;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
-using VMsApp.Dialogs;
 using VMsApp.Helpers;
 using VMsApp.PInvoke.Comctl32;
 using VMsApp.PInvoke.User32;
-using VMsApp.TabPages;
 using VMsApp.VMSettingsPages;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Graphics;
-using Windows.UI.ApplicationSettings;
 using WinUIEx;
 using WinUIEx.Messaging;
 
@@ -100,7 +88,6 @@ namespace VMsApp
                 IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
             }
         }
-
         private void OnAppWindowChanged(AppWindow sender, AppWindowChangedEventArgs args)
         {
             if (args.DidPositionChange)

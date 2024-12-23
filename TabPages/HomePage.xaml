@@ -5,7 +5,6 @@
     xmlns:local="using:VMsApp.TabPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:extensions="using:CommunityToolkit.WinUI"
     mc:Ignorable="d">
 
     <Grid>
@@ -19,33 +18,7 @@
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0">
             <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">
-                <Button x:Name="CreateVMButton" Width="150" Click="CreateVMButton_Click" Height="150" CornerRadius="4" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3">
-                    <Button.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                                    <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                                <ResourceDictionary x:Key="Light">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                                    <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </Button.Resources>
+                <Button x:Name="CreateVMButton" Width="150" Click="CreateVMButton_Click" Height="150" UseSystemFocusVisuals="False" IsTabStop="False">
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock x:Uid="CreateVMString" Text="Create a New Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
@@ -53,66 +26,10 @@
                 </Button>
             </Grid>
             <Grid x:Name="OpenVMGrid" Padding="5,0,5,0">
-                <Button x:Name="OpenVMButton" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3" CornerRadius="4">
-                    <Button.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                                <ResourceDictionary x:Key="Light">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </Button.Resources>
+                <Button x:Name="OpenVMButton" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" UseSystemFocusVisuals="False" IsTabStop="False">
                     <Grid Margin="-75,-75,-75,-75">
                         <FontIcon Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock x:Uid="OpenVMString" Text="Open a Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="25,75,25,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
-                    </Grid>
-                </Button>
-            </Grid>
-            <Grid x:Name="ConnectToServerGrid" Padding="5,0,5,0">
-                <Button x:Name="ConnectToServerButton" Width="150" Height="150" UseSystemFocusVisuals="False" IsTabStop="False" BorderThickness="3,3,3,3" VerticalAlignment="Top" HorizontalAlignment="Center" CornerRadius="4">
-                    <Button.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                                <ResourceDictionary x:Key="Light">
-                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </Button.Resources>
-                    <Grid Margin="-75,-75,-75,-75">
-                        <FontIcon Glyph="&#xE13C;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock x:Uid="ConnectToServerString" Text="Connect to a Remote Server" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" Height="38" VerticalAlignment="Top" Width="140"/>
                     </Grid>
                 </Button>
             </Grid>

@@ -12,108 +12,172 @@
     IsMinimizable="False">
     
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="Base"/>
+        <MicaBackdrop Kind="BaseAlt"/>
     </Window.SystemBackdrop>
     
-    <Grid>
-        <Grid x:Name="PreferencesWindowTitleBar" Height="40" VerticalAlignment="Top" Background="Transparent">
-            <StackPanel x:Name="TitleBar" Orientation="Horizontal">
-                <Border             
-Height="40"
-Margin="12,2,0,0"
-VerticalAlignment="Top"
-Background="Transparent"
-Canvas.ZIndex="1"
-IsHitTestVisible="True"
-RelativePanel.AlignLeftWithPanel="True"
-RelativePanel.AlignRightWithPanel="True">
-                    <StackPanel Orientation="Horizontal" Width="Auto">
-                        <FontIcon Glyph="&#xE713;" Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,2,0,0"/>
-                        <TextBlock
-        x:Name="PreferencesWindowTitle"
-        Margin="12,2,4,0"
-        VerticalAlignment="Center"
-        Text="Preferences"
-        FontSize="12"
-        FontWeight="Normal" Foreground="{ThemeResource SystemAccentColor}"/>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
+    <Page>
+        <Page.Resources>
+            <ResourceDictionary>
+                <MenuFlyout
+                x:Name="TitlebarMenuFlyout"
+                x:FieldModifier="public"
+                Placement="BottomEdgeAlignedLeft">
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnRestoreClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Restore"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE923;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMoveClicked}"
+                    IsEnabled="{x:Bind IsWindowMaximized.Equals(x:False), Mode=OneWay}"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Tag="{x:Bind TitlebarMenuFlyout}"
+                    Text="Move"
+                    UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnSizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Tag="{x:Bind TitlebarMenuFlyout}"
+                    Text="Size"
+                    UseSystemFocusVisuals="False" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMinimizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Minimize"
+                    UseSystemFocusVisuals="False">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE921;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnMaximizeClicked}"
+                    IsEnabled="False"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Maximize"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE922;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutSeparator Width="200" />
+
+                    <MenuFlyoutItem
+                    Click="{x:Bind OnCloseClicked}"
+                    IsTabStop="False"
+                    Style="{StaticResource AppTitleBarMenuFlyoutItemStyle}"
+                    Text="Close"
+                    UseSystemFocusVisuals="False">
+
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE8BB;" />
+                        </MenuFlyoutItem.Icon>
+
+                        <MenuFlyoutItem.KeyboardAccelerators>
+                            <KeyboardAccelerator Key="F4" Modifiers="Menu" />
+                        </MenuFlyoutItem.KeyboardAccelerators>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </ResourceDictionary>
+        </Page.Resources>
+        <Grid>
+            <winex:TitleBar
+                x:Name="PreferencesWindowTitleBar"
+                Title="Preferences"
+                Height="32"
+                VerticalAlignment="Top"
+                Background="Transparent">
+                <winex:TitleBar.IconSource>
+                    <FontIconSource Glyph="&#xE713;"/>
+                </winex:TitleBar.IconSource>
+            </winex:TitleBar>
+            <NavigationView x:Name="PreferencesNavView" IsSettingsVisible="False" Loaded="NavigationView_Loaded" PaneDisplayMode="Left" OpenPaneLength="200" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" SelectionChanged="NavigationView_SelectionChanged" Margin="0,32,0,50">
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Tag="Workspace" Content="Workspace" IsSelected="True">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE821;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Input" Content="Input">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE961;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="HotKeys" Content="Hot Keys">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE84B;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Display" Content="Display">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE770;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="USB" Content="USB">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE88E;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Updates" Content="Updates">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE777;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Feedback" Content="Feedback">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xED15;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Memory" Content="Memory">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE950;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Priority" Content="Priority">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE182;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Tag="Devices" Content="Devices">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE772;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationView.MenuItems>
+                <Frame x:Name="PreferencesFrame">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition />
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+            </NavigationView>
+            <Grid x:Name="BottomGrid" VerticalAlignment="Bottom" Height="50">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                    <Button x:Name="OKButton" Content="OK" Height="35" Click="OKButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Margin="0,0,10,0" Style="{StaticResource AccentButtonStyle}"/>
+                    <Button	x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0"/>
+                    <Button x:Name="HelpButton" Content="Help" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0"/>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <NavigationView x:Name="PreferencesNavView" IsSettingsVisible="False" Loaded="NavigationView_Loaded" PaneDisplayMode="Left" OpenPaneLength="200" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" ItemInvoked="NavigationView_ItemInvoked" Margin="0,40,0,0">
-            <NavigationView.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.MergedDictionaries>
-                        <ResourceDictionary Source="ms-appx:///Styles/NavigationViewItemButtonStyle.xaml" />
-                    </ResourceDictionary.MergedDictionaries>
-                    <SolidColorBrush x:Key="NavigationViewContentGridBorderBrush" Color="Transparent" />
-                    <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
-                </ResourceDictionary>
-            </NavigationView.Resources>
-            <NavigationView.MenuItems>
-                <NavigationViewItem x:Name="Workspace" Content="Workspace" IsSelected="True">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE821;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Input" Content="Input">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE961;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="HotKeys" Content="Hot Keys">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE84B;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Display" Content="Display">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE770;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Unity" Content="Unity">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE2AE;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="USB" Content="USB">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE88E;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Updates" Content="Updates">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE777;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Feedback" Content="Feedback">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xED15;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Memory" Content="Memory">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE950;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Priority" Content="Priority">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE182;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem x:Name="Devices" Content="Devices">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE772;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-            </NavigationView.MenuItems>
-            <Frame x:Name="PreferencesFrame">
-                <Frame.ContentTransitions>
-                    <TransitionCollection>
-                        <NavigationThemeTransition />
-                    </TransitionCollection>
-                </Frame.ContentTransitions>
-            </Frame>
-        </NavigationView>
-    </Grid>
+    </Page>
 </winex:WindowEx>

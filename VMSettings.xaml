@@ -14,7 +14,7 @@
     IsMinimizable="False">
 
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="Base"/>
+        <MicaBackdrop Kind="BaseAlt"/>
     </Window.SystemBackdrop>
 
     <Page>
@@ -109,19 +109,10 @@
                 VerticalAlignment="Top"
                 Background="Transparent">
                 <winex:TitleBar.IconSource>
-                    <FontIconSource Glyph="&#xE713;" />
+                    <FontIconSource Glyph="&#xE713;"/>
                 </winex:TitleBar.IconSource>
             </winex:TitleBar>
             <NavigationView Margin="0,32,0,50" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" IsSettingsVisible="False" SelectionChanged="NavigationView_SelectionChanged" PaneDisplayMode="Top">
-                <NavigationView.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.MergedDictionaries>
-                            <ResourceDictionary Source="ms-appx:///Styles/NavigationViewItemButtonStyle.xaml" />
-                        </ResourceDictionary.MergedDictionaries>
-                        <SolidColorBrush x:Key="NavigationViewContentGridBorderBrush" Color="Transparent" />
-                        <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
-                    </ResourceDictionary>
-                </NavigationView.Resources>
                 <NavigationView.MenuItems>
                     <NavigationViewItem Tag="Hardware" Content="Hardware" IsSelected="True">
                         <NavigationViewItem.Icon>
@@ -138,9 +129,9 @@
             </NavigationView>
             <Grid x:Name="BottomGrid" VerticalAlignment="Bottom" Height="50">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                    <Button x:Name="OKButton" Content="OK" Height="35" Click="OKButton_Click" UseSystemFocusVisuals="False" BorderThickness="2,2,2,2" IsTabStop="False" Margin="0,0,10,0"/>
-                    <Button	x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" BorderThickness="2,2,2,2" IsTabStop="False" Margin="0,0,10,0"/>
-                    <Button x:Name="HelpButton" Content="Help" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" BorderThickness="2,2,2,2" IsTabStop="False" Margin="0,0,10,0"/>
+                    <Button x:Name="OKButton" Content="OK" Height="35" Click="OKButton_Click" UseSystemFocusVisuals="False" IsTabStop="False" Margin="0,0,10,0" Style="{StaticResource AccentButtonStyle}"/>
+                    <Button	x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0"/>
+                    <Button x:Name="HelpButton" Content="Help" Height="35" UseSystemFocusVisuals="False" VerticalAlignment="Center" IsTabStop="False" Margin="0,0,10,0"/>
                 </StackPanel>
             </Grid>
         </Grid>

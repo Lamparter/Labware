@@ -8,7 +8,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE770;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock Text="Display" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+        </Grid>
+        <ScrollViewer Margin="0,48,0,0">
             <StackPanel Padding="10,0,0,0">
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                     <TextBlock Text="Autofit" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
@@ -17,14 +21,14 @@
                     <CheckBox Content="Autofit guest" IsChecked="True" VerticalAlignment="Top" Margin="0,112,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
                     <TextBlock Text="When the application window is resized, change the virtual machine display settings to match." HorizontalAlignment="Left" FontSize="16" TextWrapping="Wrap" Width="550" VerticalAlignment="Top" Margin="0,144,0,0"/>
                 </Grid>
-                <RadioButtons Header="Full screen" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
-                    <RadioButton Content="Autofit guest (change guest resolution)" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <RadioButton Content="Center guest (no resolution change)" UseSystemFocusVisuals="False" FontSize="16"/>
+                <RadioButtons Header="Full screen" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
+                    <RadioButton Content="Autofit guest (change guest resolution)" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
+                    <RadioButton Content="Center guest (no resolution change)" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
                 </RadioButtons>
-                <RadioButtons Header="Color Theme" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
-                    <RadioButton Content="System (use app mode of Host OS)" IsChecked="True" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <RadioButton Content="Light" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <RadioButton Content="Dark" UseSystemFocusVisuals="False" FontSize="16"/>
+                <RadioButtons Header="Color Theme" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
+                    <RadioButton Content="System (use app mode of Host OS)" IsChecked="True" FontWeight="Normal" UseSystemFocusVisuals="False" FontSize="16"/>
+                    <RadioButton Content="Light" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
+                    <RadioButton Content="Dark" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
                 </RadioButtons>
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
                     <TextBlock Text="Graphics" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>

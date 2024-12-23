@@ -8,15 +8,15 @@
     xmlns:Custom="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="Base"/>
+        <MicaBackdrop Kind="BaseAlt"/>
     </Window.SystemBackdrop>
     <Grid>
-        <Image Source="ms-appx:///Assets/Square44x44Logo.png" Width="125" HorizontalAlignment="Left" Margin="50"/>
+        <Image Source="ms-appx:///Assets/StoreLogo.png" Width="125" HorizontalAlignment="Left" Margin="50"/>
         <StackPanel Margin="225, 45, 0, 0">
             <TextBlock Text="VMsApp" FontSize="22"/>
             <TextBlock Text="Modern virtualization software" Margin="0, 15, 0, 0"/>
             <TextBlock Text="Developed by the VMsApp devs"/>
-            <TextBlock Text="0.1 PREVIEW"/>
+            <TextBlock Text="0.2 Preview"/>
             <TextBlock Text="Compilation date" x:Name="CompilationText"/>
             <TextBlock Text=""/>
             <TextBlock Text="Made with the Windows App SDK"/>

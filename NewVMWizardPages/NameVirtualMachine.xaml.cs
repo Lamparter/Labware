@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,11 @@ namespace VMsApp.NewVMWizardPages
         {
             if (Main.TypeCustom.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(ProcessorConfiguration));
+                this.Frame.Navigate(typeof(ProcessorConfiguration), null, new SuppressNavigationTransitionInfo());
             }
             else
             {
-                this.Frame.Navigate(typeof(DiskCapacity));
+                this.Frame.Navigate(typeof(DiskCapacity), null, new SuppressNavigationTransitionInfo());
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)

@@ -18,33 +18,6 @@
             <RadioButton GroupName="VMType" x:FieldModifier="public" x:Name="CustomRadioButton" Content="Custom (Advanced)" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" IsChecked="{x:Bind CustomRadioButton.IsChecked, Mode=TwoWay}" Margin="0,66,0,0" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
             <TextBlock Text="Create a virtual machine with advanced options." FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,98,0,0"/>
         </Grid>
-        <Button x:Name="NextButton" Margin="0,0,10,10" Content="Next" Click="NextButton_Click" BorderThickness="2" FontSize="16" UseSystemFocusVisuals="False" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <ResourceDictionary.ThemeDictionaries>
-                        <ResourceDictionary x:Key="Dark">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorDark3}"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorDark2}"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorDark1}"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="Light">
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="{StaticResource SystemAccentColor}"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource SystemAccentColorLight3}"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemAccentColorLight2}"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{StaticResource SystemAccentColorLight1}"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{StaticResource SystemAccentColor}"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{StaticResource SystemAccentColor}"/>
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </Button.Resources>
-        </Button>
+        <Button x:Name="NextButton" Margin="0,0,10,10" Content="Next" Click="NextButton_Click" FontSize="16" UseSystemFocusVisuals="False" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
