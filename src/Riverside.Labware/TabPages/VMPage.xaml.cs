@@ -16,7 +16,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using WinUIEx;
 
-namespace Labware.TabPages
+namespace Riverside.Labware.TabPages
 {
     public sealed partial class VMPage : Page
     {

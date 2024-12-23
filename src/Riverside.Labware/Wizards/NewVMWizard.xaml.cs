@@ -6,16 +6,16 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using Labware.Helpers;
-using Labware.NewVMWizardPages;
-using Labware.PInvoke.Comctl32;
-using Labware.PInvoke.User32;
+using Riverside.Labware.Helpers;
+using Riverside.Labware.NewVMWizardPages;
+using Riverside.Labware.PInvoke.Comctl32;
+using Riverside.Labware.PInvoke.User32;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Labware.Wizards
+namespace Riverside.Labware.Wizards
 {
     public sealed partial class NewVMWizard : WindowEx, INotifyPropertyChanged
     {

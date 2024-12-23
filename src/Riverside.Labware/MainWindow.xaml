@@ -1,16 +1,16 @@
 <winex:WindowEx
-    x:Class="Labware.MainWindow"
+    x:Class="Riverside.Labware.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="using:CommunityToolkit.WinUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:Labware"
+    xmlns:local="using:Riverside.Labware"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="using:Labware.TabPages"
+    xmlns:pages="using:Riverside.Labware.TabPages"
     xmlns:winex="using:WinUIEx"
     xmlns:sizers="using:CommunityToolkit.WinUI.Controls"
     xmlns:devwinui="using:DevWinUI"
-    Title="Labware"
+    Title="Riverside.Labware"
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
@@ -498,7 +498,7 @@
                                 x:Uid="AboutItemString"
                                 Click="About_Click"
                                 IsTabStop="False"
-                                Text="About Labware"
+                                Text="About Riverside.Labware"
                                 UseSystemFocusVisuals="False" />
                                 </MenuBarItem>
                             </MenuBar>
@@ -799,7 +799,7 @@
                     <TreeView.RootNodes>
                         <TreeViewNode Content="My Computer" IsExpanded="True">
                             <TreeViewNode.Children>
-                                <TreeViewNode Content="LabwareOS" />
+                                <TreeViewNode Content="Riverside.LabwareOS" />
                             </TreeViewNode.Children>
                         </TreeViewNode>
                     </TreeView.RootNodes>
@@ -846,7 +846,7 @@
                         </TabViewItem>
                         <TabViewItem
                             x:Uid="VMTab"
-                            Header="LabwareOS"
+                            Header="Riverside.LabwareOS"
                             IsTabStop="False"
                             UseSystemFocusVisuals="False">
                             <TabViewItem.IconSource>

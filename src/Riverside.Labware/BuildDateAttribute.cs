@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labware
+namespace Riverside.Labware
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     internal class BuildDateAttribute : Attribute

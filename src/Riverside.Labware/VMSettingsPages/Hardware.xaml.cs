@@ -13,9 +13,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Labware.Dialogs;
+using Riverside.Labware.Dialogs;
 
-namespace Labware.VMSettingsPages
+namespace Riverside.Labware.VMSettingsPages
 {
     public sealed partial class Hardware : Page
     {

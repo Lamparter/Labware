@@ -8,15 +8,15 @@ using WinUIEx.Messaging;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using Microsoft.UI.Content;
-using Labware.PInvoke.Comctl32;
-using Labware.PInvoke.User32;
+using Riverside.Labware.PInvoke.Comctl32;
+using Riverside.Labware.PInvoke.User32;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Controls;
-using Labware.Helpers;
+using Riverside.Labware.Helpers;
 using Windows.Foundation;
 using System.ComponentModel;
 
-namespace Labware
+namespace Riverside.Labware
 {
     public sealed partial class AboutApp : WindowEx, INotifyPropertyChanged
     {

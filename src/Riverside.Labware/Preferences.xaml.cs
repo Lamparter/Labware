@@ -7,16 +7,16 @@ using Microsoft.UI.Xaml.Media.Animation;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using Labware.Helpers;
-using Labware.PInvoke.Comctl32;
-using Labware.PInvoke.User32;
-using Labware.PreferencesPages;
+using Riverside.Labware.Helpers;
+using Riverside.Labware.PInvoke.Comctl32;
+using Riverside.Labware.PInvoke.User32;
+using Riverside.Labware.PreferencesPages;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Labware
+namespace Riverside.Labware
 {
     public sealed partial class Preferences : WindowEx, INotifyPropertyChanged
     {

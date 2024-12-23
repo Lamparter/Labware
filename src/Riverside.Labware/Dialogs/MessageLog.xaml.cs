@@ -14,16 +14,16 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Labware.Helpers;
-using Labware.PInvoke.Comctl32;
-using Labware.PInvoke.User32;
+using Riverside.Labware.Helpers;
+using Riverside.Labware.PInvoke.Comctl32;
+using Riverside.Labware.PInvoke.User32;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Labware.Dialogs
+namespace Riverside.Labware.Dialogs
 {
     public sealed partial class MessageLog : WindowEx, INotifyPropertyChanged
     {

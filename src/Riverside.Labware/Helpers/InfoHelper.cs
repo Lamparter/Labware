@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.System.Profile;
 
-namespace Labware.Helpers
+namespace Riverside.Labware.Helpers
 {
     public static class InfoHelper
     {

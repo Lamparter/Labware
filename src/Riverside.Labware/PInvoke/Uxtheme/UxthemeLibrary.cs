@@ -2,7 +2,7 @@
 
 #pragma warning disable CA1401
 
-namespace Labware.PInvoke.Uxtheme
+namespace Riverside.Labware.PInvoke.Uxtheme
 {
     public static partial class UxthemeLibrary
     {

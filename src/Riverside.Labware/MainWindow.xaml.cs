@@ -6,22 +6,22 @@ using Microsoft.UI.Xaml.Input;
 using System;
 using WinUIEx;
 using Windows.Graphics;
-using Labware.Dialogs;
-using Labware.Wizards;
+using Riverside.Labware.Dialogs;
+using Riverside.Labware.Wizards;
 using System.Runtime.InteropServices;
 using Microsoft.UI.Content;
 using System.ComponentModel;
-using Labware.PInvoke.Comctl32;
-using Labware.PInvoke.User32;
-using Labware.Helpers;
+using Riverside.Labware.PInvoke.Comctl32;
+using Riverside.Labware.PInvoke.User32;
+using Riverside.Labware.Helpers;
 using Windows.Foundation;
 using Microsoft.UI;
 using Windows.UI;
-using Labware.PInvoke.Uxtheme;
+using Riverside.Labware.PInvoke.Uxtheme;
 using WinRT.Interop;
 using Microsoft.UI.Xaml.Media;
 
-namespace Labware
+namespace Riverside.Labware
 {
     public sealed partial class MainWindow : WindowEx, INotifyPropertyChanged
     {

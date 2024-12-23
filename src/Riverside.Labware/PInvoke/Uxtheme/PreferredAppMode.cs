@@ -1,4 +1,4 @@
-﻿namespace Labware.PInvoke.Uxtheme
+﻿namespace Riverside.Labware.PInvoke.Uxtheme
 {
     public enum PreferredAppMode
     {

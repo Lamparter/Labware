@@ -14,7 +14,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace Labware.NewVMWizardPages
+namespace Riverside.Labware.NewVMWizardPages
 {
     public sealed partial class Installation : Page
     {

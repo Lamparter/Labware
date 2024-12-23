@@ -14,7 +14,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace Labware.VMSettingsPages
+namespace Riverside.Labware.VMSettingsPages
 {
     public sealed partial class Options : Page
     {

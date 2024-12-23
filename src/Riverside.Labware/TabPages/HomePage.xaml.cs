@@ -14,11 +14,11 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using WinUIEx;
-using Labware.Wizards;
+using Riverside.Labware.Wizards;
 using Microsoft.UI.Windowing;
 using System.Runtime.InteropServices;
 
-namespace Labware.TabPages
+namespace Riverside.Labware.TabPages
 {
     public sealed partial class HomePage : Page
     {
