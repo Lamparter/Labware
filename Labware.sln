@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35424.110
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labware", "src\Riverside.Labware\Labware.csproj", "{B49B1864-DEF0-48E2-B512-9B8987B39C5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Labware", "src\Riverside.Labware\Riverside.Labware.csproj", "{B49B1864-DEF0-48E2-B512-9B8987B39C5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3751A6B1-FECC-4499-8D66-5ADBE8D7287C}"
 EndProject
