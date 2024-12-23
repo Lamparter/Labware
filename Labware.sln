@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eng", "eng", "{28101004-A1F3-4B13-A7BF-DDC368FE10D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{F9555862-9781-4AB9-937C-87DD456B79F6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\README.md = .github\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
