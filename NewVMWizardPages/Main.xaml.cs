@@ -14,7 +14,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace VMsApp.NewVMWizardPages
+namespace Labware.NewVMWizardPages
 {
     public sealed partial class Main : Page
     {

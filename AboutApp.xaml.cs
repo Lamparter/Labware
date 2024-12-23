@@ -8,15 +8,15 @@ using WinUIEx.Messaging;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using Microsoft.UI.Content;
-using VMsApp.PInvoke.Comctl32;
-using VMsApp.PInvoke.User32;
+using Labware.PInvoke.Comctl32;
+using Labware.PInvoke.User32;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Controls;
-using VMsApp.Helpers;
+using Labware.Helpers;
 using Windows.Foundation;
 using System.ComponentModel;
 
-namespace VMsApp
+namespace Labware
 {
     public sealed partial class AboutApp : WindowEx, INotifyPropertyChanged
     {

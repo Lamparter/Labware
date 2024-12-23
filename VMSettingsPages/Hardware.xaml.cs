@@ -13,9 +13,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using VMsApp.Dialogs;
+using Labware.Dialogs;
 
-namespace VMsApp.VMSettingsPages
+namespace Labware.VMSettingsPages
 {
     public sealed partial class Hardware : Page
     {

@@ -1,4 +1,4 @@
-﻿namespace VMsApp.PInvoke.Uxtheme
+﻿namespace Labware.PInvoke.Uxtheme
 {
     public enum PreferredAppMode
     {

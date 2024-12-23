@@ -10,11 +10,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using VMsApp.Wizards;
+using Labware.Wizards;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace VMsApp.NewVMWizardPages
+namespace Labware.NewVMWizardPages
 {
     public sealed partial class ReadyToCreate : Page
     {

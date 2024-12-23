@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VMsApp
+namespace Labware
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     internal class BuildDateAttribute : Attribute

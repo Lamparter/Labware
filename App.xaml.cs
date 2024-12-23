@@ -3,7 +3,7 @@ using System;
 using System.Threading.Tasks;
 using WinUIEx;
 
-namespace VMsApp
+namespace Labware
 {
     public partial class App : Application
     {

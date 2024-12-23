@@ -13,7 +13,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace VMsApp.PreferencesPages
+namespace Labware.PreferencesPages
 {
     public sealed partial class Display : Page
     {

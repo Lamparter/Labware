@@ -14,11 +14,11 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using WinUIEx;
-using VMsApp.Wizards;
+using Labware.Wizards;
 using Microsoft.UI.Windowing;
 using System.Runtime.InteropServices;
 
-namespace VMsApp.TabPages
+namespace Labware.TabPages
 {
     public sealed partial class HomePage : Page
     {

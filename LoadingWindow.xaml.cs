@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using WinUIEx;
 
-namespace VMsApp
+namespace Labware
 {
     public sealed partial class LoadingWindow : Window
     {

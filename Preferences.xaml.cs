@@ -7,16 +7,16 @@ using Microsoft.UI.Xaml.Media.Animation;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using VMsApp.Helpers;
-using VMsApp.PInvoke.Comctl32;
-using VMsApp.PInvoke.User32;
-using VMsApp.PreferencesPages;
+using Labware.Helpers;
+using Labware.PInvoke.Comctl32;
+using Labware.PInvoke.User32;
+using Labware.PreferencesPages;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace VMsApp
+namespace Labware
 {
     public sealed partial class Preferences : WindowEx, INotifyPropertyChanged
     {

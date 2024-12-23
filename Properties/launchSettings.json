@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "VMsApp (Package)": {
+    "Labware (Package)": {
       "commandName": "MsixPackage"
     },
-    "VMsApp (Unpackaged)": {
+    "Labware (Unpackaged)": {
       "commandName": "Project"
     }
   }

@@ -6,22 +6,22 @@ using Microsoft.UI.Xaml.Input;
 using System;
 using WinUIEx;
 using Windows.Graphics;
-using VMsApp.Dialogs;
-using VMsApp.Wizards;
+using Labware.Dialogs;
+using Labware.Wizards;
 using System.Runtime.InteropServices;
 using Microsoft.UI.Content;
 using System.ComponentModel;
-using VMsApp.PInvoke.Comctl32;
-using VMsApp.PInvoke.User32;
-using VMsApp.Helpers;
+using Labware.PInvoke.Comctl32;
+using Labware.PInvoke.User32;
+using Labware.Helpers;
 using Windows.Foundation;
 using Microsoft.UI;
 using Windows.UI;
-using VMsApp.PInvoke.Uxtheme;
+using Labware.PInvoke.Uxtheme;
 using WinRT.Interop;
 using Microsoft.UI.Xaml.Media;
 
-namespace VMsApp
+namespace Labware
 {
     public sealed partial class MainWindow : WindowEx, INotifyPropertyChanged
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.System.Profile;
 
-namespace VMsApp.Helpers
+namespace Labware.Helpers
 {
     public static class InfoHelper
     {

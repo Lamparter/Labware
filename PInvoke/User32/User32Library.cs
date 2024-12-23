@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace VMsApp.PInvoke.User32
+namespace Labware.PInvoke.User32
 {
     public static partial class User32Library
     {

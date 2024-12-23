@@ -14,16 +14,16 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
-using VMsApp.Helpers;
-using VMsApp.PInvoke.Comctl32;
-using VMsApp.PInvoke.User32;
+using Labware.Helpers;
+using Labware.PInvoke.Comctl32;
+using Labware.PInvoke.User32;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace VMsApp.Dialogs
+namespace Labware.Dialogs
 {
     public sealed partial class MessageLog : WindowEx, INotifyPropertyChanged
     {

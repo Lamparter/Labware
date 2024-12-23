@@ -6,16 +6,16 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using VMsApp.Helpers;
-using VMsApp.NewVMWizardPages;
-using VMsApp.PInvoke.Comctl32;
-using VMsApp.PInvoke.User32;
+using Labware.Helpers;
+using Labware.NewVMWizardPages;
+using Labware.PInvoke.Comctl32;
+using Labware.PInvoke.User32;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace VMsApp.Wizards
+namespace Labware.Wizards
 {
     public sealed partial class NewVMWizard : WindowEx, INotifyPropertyChanged
     {

@@ -1,4 +1,4 @@
-﻿namespace VMsApp.PInvoke.User32
+﻿namespace Labware.PInvoke.User32
 {
     public enum WindowMessage : int
     {
