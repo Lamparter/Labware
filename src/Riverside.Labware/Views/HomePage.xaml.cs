@@ -6,7 +6,7 @@ using System;
 using System.Runtime.InteropServices;
 using WinUIEx;
 
-namespace Riverside.Labware.TabPages
+namespace Riverside.Labware.Views
 {
     public sealed partial class HomePage : Page
     {

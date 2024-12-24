@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using WinUIEx;
 using Riverside.Labware.Dialogs;
 
-namespace Riverside.Labware.TabPages
+namespace Riverside.Labware.Views
 {
     public sealed partial class VMPage : Page
     {
