@@ -386,7 +386,7 @@ namespace Riverside.Labware
         }
         private void Preferences_Click(object sender, RoutedEventArgs e)
         {
-            Preferences logWin = new();
+            SettingsWindow logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
     }

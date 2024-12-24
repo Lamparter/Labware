@@ -29,7 +29,6 @@
     <None Remove="NewVMWizardPages\OperatingSystem.xaml" />
     <None Remove="NewVMWizardPages\ProcessorConfiguration.xaml" />
     <None Remove="NewVMWizardPages\ReadyToCreate.xaml" />
-    <None Remove="Preferences.xaml" />
     <None Remove="Views\Settings\Devices.xaml" />
     <None Remove="Views\Settings\Display.xaml" />
     <None Remove="Views\Settings\Feedback.xaml" />
@@ -103,7 +102,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Preferences.xaml">
+    <Page Update="SettingsWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
