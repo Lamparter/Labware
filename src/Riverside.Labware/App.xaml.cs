@@ -12,7 +12,7 @@ namespace Riverside.Labware
         }
         protected override async void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            LoadingWindow loadingwindow = new();
+            Dialogs.SplashScreen loadingwindow = new();
             m_window = new MainWindow();
             _ = loadingwindow.Show();
             await Task.Delay(500);

@@ -4,11 +4,11 @@ using System.Reflection;
 using System.Threading.Tasks;
 using WinUIEx;
 
-namespace Riverside.Labware
+namespace Riverside.Labware.Dialogs
 {
-    public sealed partial class LoadingWindow : Window
+    public sealed partial class SplashScreen : Window
     {
-        public LoadingWindow()
+        public SplashScreen()
         {
             InitializeComponent();
             this.SetWindowSize(550, 300);
