@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Riverside.Labware.PInvoke.Uxtheme
+namespace Riverside.Labware.Core.PInvoke.Uxtheme
 {
     public static partial class UxthemeLibrary
     {

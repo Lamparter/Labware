@@ -1,8 +1,8 @@
-﻿using Riverside.Labware.PInvoke.User32;
+﻿using Riverside.Labware.Core.PInvoke.User32;
 using System;
 using System.Runtime.InteropServices;
 
-namespace Riverside.Labware.PInvoke.Comctl32
+namespace Riverside.Labware.Core.PInvoke.Comctl32
 {
     public static partial class Comctl32Library
     {

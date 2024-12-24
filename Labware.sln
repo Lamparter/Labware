@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{F955
 		.github\README.md = .github\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Labware.Core", "src\Riverside.Labware.Core\Riverside.Labware.Core.csproj", "{2BB34347-DBD3-40BF-851F-EFE413F47EFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -44,11 +46,24 @@ Global
 		{B49B1864-DEF0-48E2-B512-9B8987B39C5B}.Release|x86.ActiveCfg = Release|x86
 		{B49B1864-DEF0-48E2-B512-9B8987B39C5B}.Release|x86.Build.0 = Release|x86
 		{B49B1864-DEF0-48E2-B512-9B8987B39C5B}.Release|x86.Deploy.0 = Release|x86
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|x64.Build.0 = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|ARM64.Build.0 = Release|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|x64.ActiveCfg = Release|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|x64.Build.0 = Release|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B49B1864-DEF0-48E2-B512-9B8987B39C5B} = {3751A6B1-FECC-4499-8D66-5ADBE8D7287C}
+		{2BB34347-DBD3-40BF-851F-EFE413F47EFC} = {3751A6B1-FECC-4499-8D66-5ADBE8D7287C}
 	EndGlobalSection
 EndGlobal

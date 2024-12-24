@@ -1,4 +1,4 @@
-﻿namespace Riverside.Labware.PInvoke.User32
+﻿namespace Riverside.Labware.Core.PInvoke.User32
 {
     public enum SYSTEMCOMMAND : int
     {

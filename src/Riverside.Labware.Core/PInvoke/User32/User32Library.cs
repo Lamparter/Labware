@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Riverside.Labware.PInvoke.User32
+namespace Riverside.Labware.Core.PInvoke.User32
 {
     public static partial class User32Library
     {
