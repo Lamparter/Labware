@@ -44,7 +44,6 @@
     <None Remove="VMSettingsPages\Hardware.xaml" />
     <None Remove="VMSettingsPages\NotAvailable.xaml" />
     <None Remove="VMSettingsPages\Options.xaml" />
-    <None Remove="Wizards\NewVMWizard.xaml" />
   </ItemGroup>
 
 	<ItemGroup>
@@ -180,7 +179,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Wizards\NewVMWizard.xaml">
+    <Page Update="Wizards\VMCreationDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

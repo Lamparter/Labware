@@ -1,9 +1,9 @@
 <winex:WindowEx
-    x:Class="Riverside.Labware.Wizards.NewVMWizard"
+    x:Class="Riverside.Labware.Dialogs.VMCreationDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:Riverside.Labware.Wizards"
+    xmlns:local="using:Riverside.Labware.Dialogs"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:winex="using:WinUIEx"
     Title="New Virtual Machine Wizard"

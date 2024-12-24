@@ -15,9 +15,9 @@ using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Riverside.Labware.Wizards
+namespace Riverside.Labware.Dialogs
 {
-    public sealed partial class NewVMWizard : WindowEx, INotifyPropertyChanged
+    public sealed partial class VMCreationDialog : WindowEx, INotifyPropertyChanged
     {
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
@@ -39,7 +39,7 @@ namespace Riverside.Labware.Wizards
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly WindowMessageMonitor _msgMonitor;
-        public NewVMWizard()
+        public VMCreationDialog()
         {
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;

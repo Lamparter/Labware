@@ -1,7 +1,7 @@
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Riverside.Labware.Wizards;
+using Riverside.Labware.Dialogs;
 using System;
 using System.Runtime.InteropServices;
 using WinUIEx;
@@ -50,7 +50,7 @@ namespace Riverside.Labware.Views
         }
         private void CreateVMButton_Click(object sender, RoutedEventArgs e)
         {
-            NewVMWizard logWin = new();
+            VMCreationDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
             App.currentWizardWin = logWin;
         }

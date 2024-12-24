@@ -10,7 +10,6 @@ using Riverside.Labware.Helpers;
 using Riverside.Labware.Core.PInvoke.Comctl32;
 using Riverside.Labware.Core.PInvoke.User32;
 using Riverside.Labware.Core.PInvoke.Uxtheme;
-using Riverside.Labware.Wizards;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -300,7 +299,7 @@ namespace Riverside.Labware
         }
         private void CreateNewVM_Click(object sender, RoutedEventArgs e)
         {
-            NewVMWizard logWin = new();
+            VMCreationDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
             App.currentWizardWin = logWin;
         }
