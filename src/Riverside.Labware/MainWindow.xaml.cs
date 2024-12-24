@@ -1,25 +1,23 @@
-﻿using Microsoft.UI.Windowing;
+﻿using Microsoft.UI;
+using Microsoft.UI.Content;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Input;
-using System;
-using WinUIEx;
-using Windows.Graphics;
 using Riverside.Labware.Dialogs;
-using Riverside.Labware.Wizards;
-using System.Runtime.InteropServices;
-using Microsoft.UI.Content;
-using System.ComponentModel;
+using Riverside.Labware.Helpers;
 using Riverside.Labware.PInvoke.Comctl32;
 using Riverside.Labware.PInvoke.User32;
-using Riverside.Labware.Helpers;
-using Windows.Foundation;
-using Microsoft.UI;
-using Windows.UI;
 using Riverside.Labware.PInvoke.Uxtheme;
-using WinRT.Interop;
-using Microsoft.UI.Xaml.Media;
+using Riverside.Labware.Wizards;
+using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using Windows.Foundation;
+using Windows.Graphics;
+using Windows.UI;
+using WinUIEx;
 
 namespace Riverside.Labware
 {

@@ -3,13 +3,13 @@ using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
-using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
 using Riverside.Labware.Helpers;
 using Riverside.Labware.NewVMWizardPages;
 using Riverside.Labware.PInvoke.Comctl32;
 using Riverside.Labware.PInvoke.User32;
+using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
@@ -41,7 +41,7 @@ namespace Riverside.Labware.Wizards
         private WindowMessageMonitor _msgMonitor;
         public NewVMWizard()
         {
-            this.InitializeComponent(); 
+            this.InitializeComponent();
             ExtendsContentIntoTitleBar = true;
             AppWindow.Resize(new SizeInt32(550, 550));
             this.CenterOnScreen();

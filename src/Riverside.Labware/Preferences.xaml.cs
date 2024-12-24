@@ -4,13 +4,13 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Media.Animation;
-using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
 using Riverside.Labware.Helpers;
 using Riverside.Labware.PInvoke.Comctl32;
 using Riverside.Labware.PInvoke.User32;
 using Riverside.Labware.PreferencesPages;
+using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
@@ -42,7 +42,7 @@ namespace Riverside.Labware
         private WindowMessageMonitor _msgMonitor;
         public Preferences()
         {
-            this.InitializeComponent(); 
+            this.InitializeComponent();
             ExtendsContentIntoTitleBar = true;
             AppWindow.Resize(new SizeInt32(800, 700));
             this.CenterOnScreen();

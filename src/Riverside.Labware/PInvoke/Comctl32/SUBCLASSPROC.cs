@@ -1,5 +1,5 @@
-﻿using System;
-using Riverside.Labware.PInvoke.User32;
+﻿using Riverside.Labware.PInvoke.User32;
+using System;
 
 namespace Riverside.Labware.PInvoke.Comctl32
 {
