@@ -7,7 +7,7 @@ using Microsoft.UI.Xaml.Media.Animation;
 using Riverside.Labware.Helpers;
 using Riverside.Labware.Core.PInvoke.Comctl32;
 using Riverside.Labware.Core.PInvoke.User32;
-using Riverside.Labware.VMSettingsPages;
+using Riverside.Labware.Views.VirtualMachine.Settings;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;

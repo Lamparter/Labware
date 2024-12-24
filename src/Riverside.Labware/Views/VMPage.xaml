@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Riverside.Labware.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vmsettings="using:Riverside.Labware.VMSettingsPages"
+    xmlns:vmsettings="using:Riverside.Labware.Views.VirtualMachine.Settings"
     mc:Ignorable="d">
 
     <Grid>

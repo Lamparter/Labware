@@ -3,7 +3,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 using Riverside.Labware.Dialogs;
 
-namespace Riverside.Labware.VMSettingsPages
+namespace Riverside.Labware.Views.VirtualMachine.Settings
 {
     public sealed partial class Hardware : Page
     {

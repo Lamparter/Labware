@@ -194,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\VirtualMachine\CreationWizard\" />
+    <Folder Include="Views\VirtualMachine\Settings\" />
   </ItemGroup>
 
   <!-- 

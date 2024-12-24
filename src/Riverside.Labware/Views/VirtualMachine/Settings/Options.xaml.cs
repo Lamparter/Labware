@@ -2,7 +2,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 
-namespace Riverside.Labware.VMSettingsPages
+namespace Riverside.Labware.Views.VirtualMachine.Settings
 {
     public sealed partial class Options : Page
     {
