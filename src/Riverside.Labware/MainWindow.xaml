@@ -805,7 +805,7 @@
                     <TreeView.RootNodes>
                         <TreeViewNode Content="My Computer" IsExpanded="True">
                             <TreeViewNode.Children>
-                                <TreeViewNode Content="Riverside.LabwareOS" />
+                                <TreeViewNode Content="LabwareOS" />
                             </TreeViewNode.Children>
                         </TreeViewNode>
                     </TreeView.RootNodes>
@@ -860,7 +860,7 @@
                         </TabViewItem>
                         <TabViewItem
                             x:Uid="VMTab"
-                            Header="Riverside.LabwareOS"
+                            Header="LabwareOS"
                             IsTabStop="False"
                             UseSystemFocusVisuals="False">
                             <TabViewItem.IconSource>
