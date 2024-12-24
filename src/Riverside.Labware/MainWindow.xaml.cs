@@ -67,14 +67,14 @@ namespace Riverside.Labware
             SetClassicMenuTheme((Content as FrameworkElement).ActualTheme);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, IntPtr.Zero);
+            _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nint.Zero);
 
-            IntPtr inputNonClientPointerSourceHandle = User32Library.FindWindowEx((IntPtr)AppWindow.Id.Value, IntPtr.Zero, "InputNonClientPointerSource", null);
+            nint inputNonClientPointerSourceHandle = User32Library.FindWindowEx((nint)AppWindow.Id.Value, nint.Zero, "InputNonClientPointerSource", null);
 
-            if (inputNonClientPointerSourceHandle != IntPtr.Zero)
+            if (inputNonClientPointerSourceHandle != nint.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, IntPtr.Zero);
+                _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nint.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -167,7 +167,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
+                _ = User32Library.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
             }
         }
         private void OnSizeClicked(object sender, RoutedEventArgs args)
@@ -176,7 +176,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
+                _ = User32Library.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
             }
         }
         private void OnMinimizeClicked(object sender, RoutedEventArgs args)
@@ -191,7 +191,7 @@ namespace Riverside.Labware
         {
             Application.Current.Exit();
         }
-        private IntPtr MainWindowSubClassProc(IntPtr hWnd, WindowMessage Msg, UIntPtr wParam, IntPtr lParam, uint uIdSubclass, IntPtr dwRefData)
+        private nint MainWindowSubClassProc(nint hWnd, WindowMessage Msg, UIntPtr wParam, nint lParam, uint uIdSubclass, nint dwRefData)
         {
             if (Msg is WindowMessage.WM_SYSCOMMAND)
             {
@@ -221,7 +221,7 @@ namespace Riverside.Labware
 
             return Comctl32Library.DefSubclassProc(hWnd, Msg, wParam, lParam);
         }
-        private IntPtr InputNonClientPointerSourceSubClassProc(IntPtr hWnd, WindowMessage Msg, UIntPtr wParam, IntPtr lParam, uint uIdSubclass, IntPtr dwRefData)
+        private nint InputNonClientPointerSourceSubClassProc(nint hWnd, WindowMessage Msg, UIntPtr wParam, nint lParam, uint uIdSubclass, nint dwRefData)
         {
             switch (Msg)
             {
@@ -255,8 +255,8 @@ namespace Riverside.Labware
         }
         public static void CreateModalWindow(WindowEx parentWindow, WindowEx childWindow, bool summonWindowAutomatically = true, bool blockInput = false)
         {
-            IntPtr hWndChildWindow = WinRT.Interop.WindowNative.GetWindowHandle(childWindow);
-            IntPtr hWndParentWindow = WinRT.Interop.WindowNative.GetWindowHandle(parentWindow);
+            nint hWndChildWindow = WinRT.Interop.WindowNative.GetWindowHandle(childWindow);
+            nint hWndParentWindow = WinRT.Interop.WindowNative.GetWindowHandle(parentWindow);
             _ = SetWindowLong(hWndChildWindow, GWL_HWNDPARENT, hWndParentWindow);
             (childWindow.AppWindow.Presenter as OverlappedPresenter).IsModal = true;
             if (blockInput == true)
@@ -273,20 +273,20 @@ namespace Riverside.Labware
                 _ = childWindow.Show();
             }
         }
-        private static IntPtr SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong)
+        private static nint SetWindowLong(nint hWnd, int nIndex, nint dwNewLong)
         {
-            return IntPtr.Size == 4 ? SetWindowLongPtr32(hWnd, nIndex, dwNewLong) : SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
+            return nint.Size == 4 ? SetWindowLongPtr32(hWnd, nIndex, dwNewLong) : SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
         }
         [DllImport("User32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
-        private static extern bool EnableWindow(IntPtr hWnd, bool bEnable);
+        private static extern bool EnableWindow(nint hWnd, bool bEnable);
 
         private const int GWL_HWNDPARENT = -8;
 
         [DllImport("User32.dll", CharSet = CharSet.Auto, EntryPoint = "SetWindowLong")]
-        private static extern IntPtr SetWindowLongPtr32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+        private static extern nint SetWindowLongPtr32(nint hWnd, int nIndex, nint dwNewLong);
 
         [DllImport("User32.dll", CharSet = CharSet.Auto, EntryPoint = "SetWindowLongPtr")]
-        private static extern IntPtr SetWindowLongPtr64(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+        private static extern nint SetWindowLongPtr64(nint hWnd, int nIndex, nint dwNewLong);
         private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             LibraryPanel.Visibility = Visibility.Collapsed;

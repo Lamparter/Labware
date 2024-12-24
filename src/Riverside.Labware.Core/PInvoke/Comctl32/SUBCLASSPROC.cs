@@ -3,5 +3,5 @@ using System;
 
 namespace Riverside.Labware.Core.PInvoke.Comctl32
 {
-    public delegate IntPtr SUBCLASSPROC(IntPtr hWnd, WindowMessage uMsg, UIntPtr wParam, IntPtr lParam, uint uIdSubclass, IntPtr dwRefData);
+    public delegate nint SUBCLASSPROC(nint hWnd, WindowMessage uMsg, UIntPtr wParam, nint lParam, uint uIdSubclass, nint dwRefData);
 }

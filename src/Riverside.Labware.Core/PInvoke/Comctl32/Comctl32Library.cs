@@ -9,8 +9,8 @@ namespace Riverside.Labware.Core.PInvoke.Comctl32
         private const string Comctl32 = "comctl32.dll";
         [LibraryImport(Comctl32, EntryPoint = "SetWindowSubclass", SetLastError = false)]
         [return: MarshalAs(UnmanagedType.Bool)]
-        public static partial bool SetWindowSubclass(IntPtr hWnd, IntPtr pfnSubclass, uint uIdSubclass, IntPtr dwRefData);
+        public static partial bool SetWindowSubclass(nint hWnd, nint pfnSubclass, uint uIdSubclass, nint dwRefData);
         [LibraryImport(Comctl32, EntryPoint = "DefSubclassProc", SetLastError = false)]
-        public static partial IntPtr DefSubclassProc(IntPtr hWnd, WindowMessage uMsg, UIntPtr wParam, IntPtr lParam);
+        public static partial nint DefSubclassProc(nint hWnd, WindowMessage uMsg, UIntPtr wParam, nint lParam);
     }
 }

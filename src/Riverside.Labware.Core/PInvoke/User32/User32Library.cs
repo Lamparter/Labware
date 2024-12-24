@@ -7,8 +7,8 @@ namespace Riverside.Labware.Core.PInvoke.User32
     {
         private const string User32 = "user32.dll";
         [LibraryImport(User32, EntryPoint = "FindWindowExW", SetLastError = false, StringMarshalling = StringMarshalling.Utf16)]
-        public static partial IntPtr FindWindowEx(IntPtr hWndParent, IntPtr hWndChildAfter, string lpszClass, string lpszWindow);
+        public static partial nint FindWindowEx(nint hWndParent, nint hWndChildAfter, string lpszClass, string lpszWindow);
         [LibraryImport(User32, EntryPoint = "SendMessageW", SetLastError = false)]
-        public static partial IntPtr SendMessage(IntPtr hWnd, WindowMessage wMsg, int wParam, IntPtr lParam);
+        public static partial nint SendMessage(nint hWnd, WindowMessage wMsg, int wParam, nint lParam);
     }
 }
