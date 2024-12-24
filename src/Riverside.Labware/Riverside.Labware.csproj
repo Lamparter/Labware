@@ -45,6 +45,9 @@
     <None Remove="VMSettingsPages\NotAvailable.xaml" />
     <None Remove="VMSettingsPages\Options.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Remove="ConnectionWindow.xaml" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<AssemblyAttribute Include="Riverside.Labware.BuildDateAttribute">
@@ -195,6 +198,11 @@
   <ItemGroup>
     <Folder Include="Views\VirtualMachine\CreationWizard\" />
     <Folder Include="Views\VirtualMachine\Settings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ConnectionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
   <!-- 
