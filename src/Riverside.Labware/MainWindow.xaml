@@ -14,7 +14,7 @@
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
-        <MicaBackdrop Kind="BaseAlt" />
+        <MicaBackdrop />
     </Window.SystemBackdrop>
 
     <Page ActualThemeChanged="{x:Bind OnActualThemeChanged}">
