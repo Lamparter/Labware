@@ -8,17 +8,17 @@ namespace Riverside.Labware.NewVMWizardPages
     {
         public DiskCapacity()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReadyToCreate), null, new SuppressNavigationTransitionInfo());
+            _ = Frame.Navigate(typeof(ReadyToCreate), null, new SuppressNavigationTransitionInfo());
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                this.Frame.GoBack();
+                Frame.GoBack();
             }
         }
     }

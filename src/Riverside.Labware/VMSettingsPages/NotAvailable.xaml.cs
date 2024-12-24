@@ -12,7 +12,7 @@ namespace Riverside.Labware.VMSettingsPages
     {
         public NotAvailable()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

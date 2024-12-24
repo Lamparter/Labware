@@ -10,20 +10,20 @@ namespace Riverside.Labware.NewVMWizardPages
         public static RadioButton TypeTypical { get; set; }
         public Main()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             TypeCustom = CustomRadioButton;
             TypeTypical = TypicalRadioButton;
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.TypicalRadioButton.IsChecked == true)
+            if (TypicalRadioButton.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(Installation), null, new SuppressNavigationTransitionInfo());
+                _ = Frame.Navigate(typeof(Installation), null, new SuppressNavigationTransitionInfo());
             }
-            if (this.CustomRadioButton.IsChecked == true)
+            if (CustomRadioButton.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(Compatibility), null, new SuppressNavigationTransitionInfo());
+                _ = Frame.Navigate(typeof(Compatibility), null, new SuppressNavigationTransitionInfo());
             }
         }
     }

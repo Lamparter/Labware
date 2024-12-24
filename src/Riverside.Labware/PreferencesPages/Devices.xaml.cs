@@ -12,7 +12,7 @@ namespace Riverside.Labware.PreferencesPages
     {
         public Devices()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

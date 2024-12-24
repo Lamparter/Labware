@@ -26,7 +26,7 @@ namespace Riverside.Labware
         private bool _isWindowMaximized;
         public bool IsWindowMaximized
         {
-            get { return _isWindowMaximized; }
+            get => _isWindowMaximized;
 
             set
             {
@@ -38,7 +38,7 @@ namespace Riverside.Labware
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
-        private WindowMessageMonitor _msgMonitor;
+        private readonly WindowMessageMonitor _msgMonitor;
         public AboutApp()
         {
             InitializeComponent();
@@ -64,14 +64,14 @@ namespace Riverside.Labware
             contentCoordinateConverter = ContentCoordinateConverter.CreateForWindowId(AppWindow.Id);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, IntPtr.Zero);
+            _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, IntPtr.Zero);
 
             IntPtr inputNonClientPointerSourceHandle = User32Library.FindWindowEx((IntPtr)AppWindow.Id.Value, IntPtr.Zero, "InputNonClientPointerSource", null);
 
             if (inputNonClientPointerSourceHandle != IntPtr.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, IntPtr.Zero);
+                _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, IntPtr.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -114,7 +114,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
+                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
             }
         }
         private void OnSizeClicked(object sender, RoutedEventArgs args)
@@ -123,7 +123,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
+                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
             }
         }
         private void OnMinimizeClicked(object sender, RoutedEventArgs args)
@@ -202,12 +202,12 @@ namespace Riverside.Labware
         }
         private static DateTime GetBuildDate(Assembly assembly)
         {
-            var attribute = assembly.GetCustomAttribute<BuildDateAttribute>();
-            return attribute != null ? attribute.DateTime : default(DateTime);
+            BuildDateAttribute attribute = assembly.GetCustomAttribute<BuildDateAttribute>();
+            return attribute != null ? attribute.DateTime : default;
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

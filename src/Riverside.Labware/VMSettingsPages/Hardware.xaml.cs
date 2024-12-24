@@ -10,7 +10,7 @@ namespace Riverside.Labware.VMSettingsPages
         private Window m_window;
         public Hardware()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -29,28 +29,28 @@ namespace Riverside.Labware.VMSettingsPages
                 switch (selectedItem.Tag)
                 {
                     case "Memory":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Processors":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "HardDisk":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "CDDVD":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "NetworkAdapter":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "USBController":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "SoundCard":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Display":
-                        HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = HardwareFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                 }
             }

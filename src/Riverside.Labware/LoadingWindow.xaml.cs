@@ -10,24 +10,24 @@ namespace Riverside.Labware
     {
         public LoadingWindow()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             this.SetWindowSize(550, 300);
-            this.ExtendsContentIntoTitleBar = true;
+            ExtendsContentIntoTitleBar = true;
             this.SetIsMinimizable(false);
             this.SetIsResizable(false);
             this.SetIsMaximizable(false);
             this.CenterOnScreen();
             this.SetIsAlwaysOnTop(true);
-            this.AppWindow.TitleBar.PreferredHeightOption = Microsoft.UI.Windowing.TitleBarHeightOption.Collapsed;
+            AppWindow.TitleBar.PreferredHeightOption = Microsoft.UI.Windowing.TitleBarHeightOption.Collapsed;
             try
             {
-                this.AppWindow.SetIcon($"{AppContext.BaseDirectory}/Assets/AppIcons/AppIcon.png");
+                AppWindow.SetIcon($"{AppContext.BaseDirectory}/Assets/AppIcons/AppIcon.png");
             }
             catch
             {
 
             }
-            this.Title = "Loading...";
+            Title = "Loading...";
 
             CompilationText.Text = "Compilation date " + GetBuildDate(Assembly.GetExecutingAssembly());
 
@@ -36,15 +36,15 @@ namespace Riverside.Labware
 
         private static DateTime GetBuildDate(Assembly assembly)
         {
-            var attribute = assembly.GetCustomAttribute<BuildDateAttribute>();
-            return attribute != null ? attribute.DateTime : default(DateTime);
+            BuildDateAttribute attribute = assembly.GetCustomAttribute<BuildDateAttribute>();
+            return attribute != null ? attribute.DateTime : default;
         }
 
         public async void Run()
         {
             await Task.Delay(1000);
 
-            this.Close();
+            Close();
         }
     }
 }

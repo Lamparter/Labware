@@ -7,7 +7,7 @@ namespace Riverside.Labware.NewVMWizardPages
     {
         public ReadyToCreate()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
@@ -15,9 +15,9 @@ namespace Riverside.Labware.NewVMWizardPages
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                this.Frame.GoBack();
+                Frame.GoBack();
             }
         }
     }

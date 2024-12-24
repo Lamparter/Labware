@@ -30,7 +30,7 @@ namespace Riverside.Labware
         private bool _isWindowMaximized;
         public bool IsWindowMaximized
         {
-            get { return _isWindowMaximized; }
+            get => _isWindowMaximized;
 
             set
             {
@@ -67,14 +67,14 @@ namespace Riverside.Labware
             SetClassicMenuTheme((Content as FrameworkElement).ActualTheme);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, IntPtr.Zero);
+            _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, IntPtr.Zero);
 
             IntPtr inputNonClientPointerSourceHandle = User32Library.FindWindowEx((IntPtr)AppWindow.Id.Value, IntPtr.Zero, "InputNonClientPointerSource", null);
 
             if (inputNonClientPointerSourceHandle != IntPtr.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, IntPtr.Zero);
+                _ = Comctl32Library.SetWindowSubclass((IntPtr)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, IntPtr.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -167,7 +167,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
+                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
             }
         }
         private void OnSizeClicked(object sender, RoutedEventArgs args)
@@ -176,7 +176,7 @@ namespace Riverside.Labware
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
+                _ = User32Library.SendMessage((IntPtr)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
             }
         }
         private void OnMinimizeClicked(object sender, RoutedEventArgs args)
@@ -257,31 +257,30 @@ namespace Riverside.Labware
         {
             IntPtr hWndChildWindow = WinRT.Interop.WindowNative.GetWindowHandle(childWindow);
             IntPtr hWndParentWindow = WinRT.Interop.WindowNative.GetWindowHandle(parentWindow);
-            SetWindowLong(hWndChildWindow, GWL_HWNDPARENT, hWndParentWindow);
+            _ = SetWindowLong(hWndChildWindow, GWL_HWNDPARENT, hWndParentWindow);
             (childWindow.AppWindow.Presenter as OverlappedPresenter).IsModal = true;
             if (blockInput == true)
             {
-                EnableWindow(hWndParentWindow, false);
+                _ = EnableWindow(hWndParentWindow, false);
                 childWindow.Closed += ChildWindow_Closed;
                 void ChildWindow_Closed(object sender, Microsoft.UI.Xaml.WindowEventArgs args)
                 {
-                    EnableWindow(hWndParentWindow, true);
+                    _ = EnableWindow(hWndParentWindow, true);
                 }
             }
-            if (summonWindowAutomatically == true) childWindow.Show();
+            if (summonWindowAutomatically == true)
+            {
+                _ = childWindow.Show();
+            }
         }
         private static IntPtr SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong)
         {
-            if (IntPtr.Size == 4)
-            {
-                return SetWindowLongPtr32(hWnd, nIndex, dwNewLong);
-            }
-            return SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
+            return IntPtr.Size == 4 ? SetWindowLongPtr32(hWnd, nIndex, dwNewLong) : SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
         }
         [DllImport("User32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
         private static extern bool EnableWindow(IntPtr hWnd, bool bEnable);
 
-        private const int GWL_HWNDPARENT = (-8);
+        private const int GWL_HWNDPARENT = -8;
 
         [DllImport("User32.dll", CharSet = CharSet.Auto, EntryPoint = "SetWindowLong")]
         private static extern IntPtr SetWindowLongPtr32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
@@ -301,7 +300,7 @@ namespace Riverside.Labware
         }
         private void CreateNewVM_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new NewVMWizard();
+            NewVMWizard logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
             App.currentWizardWin = logWin;
         }
@@ -312,12 +311,11 @@ namespace Riverside.Labware
         }
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new FeatureNotAvailable();
+            FeatureNotAvailable logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
         {
-            Button btnE = sender as Button;
             if (LibraryPanel.Visibility == Visibility.Visible)
             {
                 LibraryPanel.Visibility = Visibility.Collapsed;
@@ -341,7 +339,6 @@ namespace Riverside.Labware
         }
         private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
         {
-            Button btnE = sender as Button;
             if (FolderView.Visibility == Visibility.Visible)
             {
                 FolderView.Visibility = Visibility.Collapsed;
@@ -357,12 +354,12 @@ namespace Riverside.Labware
         }
         private void VMSettings_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new VMSettings();
+            VMSettings logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new AboutApp();
+            AboutApp logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
@@ -379,17 +376,17 @@ namespace Riverside.Labware
         }
         private void MessageLog_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new MessageLog();
+            MessageLog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void VMMessageLog_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new MessageLog();
+            MessageLog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void Preferences_Click(object sender, RoutedEventArgs e)
         {
-            var logWin = new Preferences();
+            Preferences logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
     }

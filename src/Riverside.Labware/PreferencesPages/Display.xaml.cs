@@ -6,7 +6,7 @@ namespace Riverside.Labware.PreferencesPages
     {
         public Display()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

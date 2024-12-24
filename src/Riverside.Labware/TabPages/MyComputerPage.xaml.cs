@@ -12,7 +12,7 @@ namespace Riverside.Labware.TabPages
     {
         public MyComputerPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

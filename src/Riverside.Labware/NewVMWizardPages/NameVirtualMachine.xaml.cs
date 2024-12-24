@@ -8,24 +8,19 @@ namespace Riverside.Labware.NewVMWizardPages
     {
         public NameVirtualMachine()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Main.TypeCustom.IsChecked == true)
-            {
-                this.Frame.Navigate(typeof(ProcessorConfiguration), null, new SuppressNavigationTransitionInfo());
-            }
-            else
-            {
-                this.Frame.Navigate(typeof(DiskCapacity), null, new SuppressNavigationTransitionInfo());
-            }
+            _ = Main.TypeCustom.IsChecked == true
+                ? Frame.Navigate(typeof(ProcessorConfiguration), null, new SuppressNavigationTransitionInfo())
+                : Frame.Navigate(typeof(DiskCapacity), null, new SuppressNavigationTransitionInfo());
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                this.Frame.GoBack();
+                Frame.GoBack();
             }
         }
     }

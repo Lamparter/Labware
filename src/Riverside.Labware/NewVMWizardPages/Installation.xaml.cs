@@ -8,20 +8,20 @@ namespace Riverside.Labware.NewVMWizardPages
     {
         public Installation()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.InstallLaterCheck.IsChecked == true)
+            if (InstallLaterCheck.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(OperatingSystem), null, new SuppressNavigationTransitionInfo());
+                _ = Frame.Navigate(typeof(OperatingSystem), null, new SuppressNavigationTransitionInfo());
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                this.Frame.GoBack();
+                Frame.GoBack();
             }
         }
     }

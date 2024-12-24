@@ -8,35 +8,35 @@ namespace Riverside.Labware.NewVMWizardPages
     {
         public OperatingSystem()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void HandleCheck(object sender, RoutedEventArgs e)
         {
-            if (this.OSSelectionBox != null && this.WindowsOS.IsChecked == true)
+            if (OSSelectionBox != null && WindowsOS.IsChecked == true)
             {
-                this.OSSelectionBox.IsEnabled = false;
+                OSSelectionBox.IsEnabled = false;
             }
-            if (this.OSSelectionBox != null && this.LinuxOS.IsChecked == true)
+            if (OSSelectionBox != null && LinuxOS.IsChecked == true)
             {
-                this.OSSelectionBox.IsEnabled = false;
+                OSSelectionBox.IsEnabled = false;
             }
-            if (this.OSSelectionBox != null && this.OtherOS.IsChecked == true)
+            if (OSSelectionBox != null && OtherOS.IsChecked == true)
             {
-                this.OSSelectionBox.IsEnabled = true;
+                OSSelectionBox.IsEnabled = true;
             }
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.OtherOS.IsChecked == true)
+            if (OtherOS.IsChecked == true)
             {
-                this.Frame.Navigate(typeof(NameVirtualMachine), null, new SuppressNavigationTransitionInfo());
+                _ = Frame.Navigate(typeof(NameVirtualMachine), null, new SuppressNavigationTransitionInfo());
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                this.Frame.GoBack();
+                Frame.GoBack();
             }
         }
     }

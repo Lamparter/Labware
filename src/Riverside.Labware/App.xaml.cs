@@ -1,5 +1,4 @@
 ﻿using Microsoft.UI.Xaml;
-using System;
 using System.Threading.Tasks;
 using WinUIEx;
 
@@ -9,13 +8,13 @@ namespace Riverside.Labware
     {
         public App()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         protected override async void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            LoadingWindow loadingwindow = new LoadingWindow();
+            LoadingWindow loadingwindow = new();
             m_window = new MainWindow();
-            loadingwindow.Show();
+            _ = loadingwindow.Show();
             await Task.Delay(500);
             m_window.Activate();
         }

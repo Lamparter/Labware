@@ -8,51 +8,51 @@ namespace Riverside.Labware.VMSettingsPages
     {
         public Options()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void OptionsNavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            var item = args.InvokedItemContainer;
+            NavigationViewItemBase item = args.InvokedItemContainer;
             switch (item.Name)
             {
                 case "General":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "Power":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "SharedFolders":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "Snapshots":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "NetworkAdapter":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "GuestIsolation":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "AccessControl":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "VMsTools":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "VNCConnections":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "Unity":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "ApplianceView":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "Autologin":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
                 case "Advanced":
-                    OptionsFrame.Navigate(typeof(NotAvailable));
+                    _ = OptionsFrame.Navigate(typeof(NotAvailable));
                     break;
             }
         }
@@ -66,7 +66,7 @@ namespace Riverside.Labware.VMSettingsPages
                     break;
                 }
             }
-            OptionsFrame.Navigate(typeof(NotAvailable));
+            _ = OptionsFrame.Navigate(typeof(NotAvailable));
         }
         private void OptionsNavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
@@ -75,43 +75,43 @@ namespace Riverside.Labware.VMSettingsPages
                 switch (selectedItem.Tag)
                 {
                     case "General":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Power":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "SharedFolders":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Snapshots":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "NetworkAdapter":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "GuestIsolation":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "AccessControl":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "VMsTools":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "VNCConnections":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Unity":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "ApplianceView":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Autologin":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                     case "Advanced":
-                        OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
+                        _ = OptionsFrame.Navigate(typeof(NotAvailable), null, new SuppressNavigationTransitionInfo());
                         break;
                 }
             }
