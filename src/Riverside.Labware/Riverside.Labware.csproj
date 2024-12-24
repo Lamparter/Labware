@@ -17,7 +17,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="AboutApp.xaml" />
     <None Remove="Dialogs\FeatureNotAvailable.xaml" />
     <None Remove="Dialogs\MessageLog.xaml" />
     <None Remove="LoadingWindow.xaml" />
@@ -152,7 +151,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AboutApp.xaml">
+    <Page Update="AboutWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

@@ -17,7 +17,7 @@ using WinUIEx.Messaging;
 
 namespace Riverside.Labware
 {
-    public sealed partial class AboutApp : WindowEx, INotifyPropertyChanged
+    public sealed partial class AboutWindow : WindowEx, INotifyPropertyChanged
     {
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
@@ -39,7 +39,7 @@ namespace Riverside.Labware
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly WindowMessageMonitor _msgMonitor;
-        public AboutApp()
+        public AboutWindow()
         {
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;

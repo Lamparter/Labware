@@ -359,7 +359,7 @@ namespace Riverside.Labware
         }
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            AboutApp logWin = new();
+            AboutWindow logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
