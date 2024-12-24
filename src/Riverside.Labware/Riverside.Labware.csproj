@@ -30,16 +30,16 @@
     <None Remove="NewVMWizardPages\ProcessorConfiguration.xaml" />
     <None Remove="NewVMWizardPages\ReadyToCreate.xaml" />
     <None Remove="Preferences.xaml" />
-    <None Remove="PreferencesPages\Devices.xaml" />
-    <None Remove="PreferencesPages\Display.xaml" />
-    <None Remove="PreferencesPages\Feedback.xaml" />
-    <None Remove="PreferencesPages\HotKeys.xaml" />
-    <None Remove="PreferencesPages\Input.xaml" />
-    <None Remove="PreferencesPages\Memory.xaml" />
-    <None Remove="PreferencesPages\Priority.xaml" />
-    <None Remove="PreferencesPages\Updates.xaml" />
-    <None Remove="PreferencesPages\USB.xaml" />
-    <None Remove="PreferencesPages\Workspace.xaml" />
+    <None Remove="Views\Settings\Devices.xaml" />
+    <None Remove="Views\Settings\Display.xaml" />
+    <None Remove="Views\Settings\Feedback.xaml" />
+    <None Remove="Views\Settings\HotKeys.xaml" />
+    <None Remove="Views\Settings\Input.xaml" />
+    <None Remove="Views\Settings\Memory.xaml" />
+    <None Remove="Views\Settings\Priority.xaml" />
+    <None Remove="Views\Settings\Updates.xaml" />
+    <None Remove="Views\Settings\USB.xaml" />
+    <None Remove="Views\Settings\Workspace.xaml" />
     <None Remove="Styles\MenuFlyout.xaml" />
     <None Remove="TabPages\HomePage.xaml" />
     <None Remove="TabPages\MyComputerPage.xaml" />
@@ -99,56 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="LoadingWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Workspace.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\USB.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Updates.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Priority.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Memory.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Input.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\HotKeys.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Feedback.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Display.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="PreferencesPages\Devices.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -254,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Riverside.Labware.Core\Riverside.Labware.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
 
   <!-- 

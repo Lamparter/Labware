@@ -1,6 +1,6 @@
 using Microsoft.UI.Xaml.Controls;
 
-namespace Riverside.Labware.PreferencesPages
+namespace Riverside.Labware.Views.Settings
 {
     public sealed partial class Display : Page
     {
