@@ -21,7 +21,7 @@ namespace Riverside.Labware
             AppWindow.TitleBar.PreferredHeightOption = Microsoft.UI.Windowing.TitleBarHeightOption.Collapsed;
             try
             {
-                AppWindow.SetIcon($"{AppContext.BaseDirectory}/Assets/AppIcons/AppIcon.png");
+                AppWindow.SetIcon($"{AppContext.BaseDirectory}/Assets/AppTiles/StoreLogo.scale-400.png");
             }
             catch
             {

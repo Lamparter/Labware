@@ -15,7 +15,7 @@
             Width="125"
             Margin="50"
             HorizontalAlignment="Left"
-            Source="ms-appx:///Assets/StoreLogo.png" />
+            Source="ms-appx:///Assets/AppTiles/StoreLogo.scale-400.png" />
         <StackPanel Margin="225,45,0,0">
             <TextBlock FontSize="22" Text="Labware" />
             <TextBlock Margin="0,15,0,0" Text="Modern virtualization software" />

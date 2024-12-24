@@ -121,7 +121,7 @@
                             Width="64"
                             Height="64"
                             VerticalAlignment="Center"
-                            Source="ms-appx:///Assets/StoreLogo.png" />
+                            Source="ms-appx:///Assets/AppTiles/StoreLogo.scale-400.png" />
                         <TextBlock
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"

@@ -17,7 +17,7 @@
   <Properties>
     <DisplayName>Labware</DisplayName>
     <PublisherDisplayName>Riverside Valley Corporation</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\AppTiles\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -37,10 +37,10 @@
         DisplayName="Labware"
         Description="Elevate your VM administration with Labware, crafted specifically to address the needs of every power user."
         BackgroundColor="transparent"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        Square150x150Logo="Assets\AppTiles\Square150x150Logo.png"
+        Square44x44Logo="Assets\AppTiles\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\AppTiles\Wide310x150Logo.png"  Square71x71Logo="Assets\AppTiles\SmallTile.png" Square310x310Logo="Assets\AppTiles\LargeTile.png"/>
+        <uap:SplashScreen Image="Assets\AppTiles\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
