@@ -504,7 +504,7 @@
                                         x:Uid="AboutItemString"
                                         Click="About_Click"
                                         IsTabStop="False"
-                                        Text="About Riverside.Labware"
+                                        Text="About Labware"
                                         UseSystemFocusVisuals="False" />
                                 </MenuBarItem>
                             </MenuBar>
