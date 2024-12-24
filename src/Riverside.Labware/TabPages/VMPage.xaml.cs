@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Runtime.InteropServices;
 using WinUIEx;
+using Riverside.Labware.Dialogs;
 
 namespace Riverside.Labware.TabPages
 {
@@ -49,7 +50,7 @@ namespace Riverside.Labware.TabPages
         private static extern nint SetWindowLongPtr64(nint hWnd, int nIndex, nint dwNewLong);
         private void EditVMSettings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettings logWin = new();
+            VMSettingsDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
     }

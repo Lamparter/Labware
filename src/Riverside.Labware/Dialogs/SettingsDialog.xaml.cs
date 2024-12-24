@@ -1,23 +1,24 @@
-﻿using Microsoft.UI.Content;
+using Microsoft.UI.Content;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Media.Animation;
 using Riverside.Labware.Helpers;
 using Riverside.Labware.Core.PInvoke.Comctl32;
 using Riverside.Labware.Core.PInvoke.User32;
+using Riverside.Labware.Views.Settings;
 using System;
 using System.ComponentModel;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using Windows.Foundation;
 using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Riverside.Labware
+namespace Riverside.Labware.Dialogs
 {
-    public sealed partial class AboutWindow : WindowEx, INotifyPropertyChanged
+    public sealed partial class SettingsDialog : WindowEx, INotifyPropertyChanged
     {
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
@@ -39,15 +40,13 @@ namespace Riverside.Labware
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly WindowMessageMonitor _msgMonitor;
-        public AboutWindow()
+        public SettingsDialog()
         {
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;
-            AppWindow.Resize(new SizeInt32(647, 458));
-
+            AppWindow.Resize(new SizeInt32(800, 700));
             this.CenterOnScreen();
-            SetTitleBar(AboutWindowTitleBar);
-            CompileDate.Text = "Compilation date " + GetBuildDate(Assembly.GetExecutingAssembly());
+            SetTitleBar(PreferencesWindowTitleBar);
 
             _msgMonitor = new WindowMessageMonitor(this);
             _msgMonitor.WindowMessageReceived += (_, e) =>
@@ -55,6 +54,7 @@ namespace Riverside.Labware
                 const int WM_NCLBUTTONDBLCLK = 0x00A3;
                 if (e.Message.MessageId == WM_NCLBUTTONDBLCLK)
                 {
+                    // Disable double click on title bar to maximize window
                     e.Result = 0;
                     e.Handled = true;
                 }
@@ -88,7 +88,6 @@ namespace Riverside.Labware
                 IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
             }
         }
-
         private void OnAppWindowChanged(AppWindow sender, AppWindowChangedEventArgs args)
         {
             if (args.DidPositionChange)
@@ -200,12 +199,62 @@ namespace Riverside.Labware
             }
             return Comctl32Library.DefSubclassProc(hWnd, Msg, wParam, lParam);
         }
-        private static DateTime GetBuildDate(Assembly assembly)
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            BuildDateAttribute attribute = assembly.GetCustomAttribute<BuildDateAttribute>();
-            return attribute != null ? attribute.DateTime : default;
+            if (args.SelectedItem is NavigationViewItem selectedItem)
+            {
+                switch (selectedItem.Tag)
+                {
+                    case "Workspace":
+                        _ = PreferencesFrame.Navigate(typeof(Workspace), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Input":
+                        _ = PreferencesFrame.Navigate(typeof(Input), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "HotKeys":
+                        _ = PreferencesFrame.Navigate(typeof(HotKeys), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Display":
+                        _ = PreferencesFrame.Navigate(typeof(Display), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "USB":
+                        _ = PreferencesFrame.Navigate(typeof(USB), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Updates":
+                        _ = PreferencesFrame.Navigate(typeof(Updates), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Feedback":
+                        _ = PreferencesFrame.Navigate(typeof(Feedback), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Memory":
+                        _ = PreferencesFrame.Navigate(typeof(Memory), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Priority":
+                        _ = PreferencesFrame.Navigate(typeof(Priority), null, new SuppressNavigationTransitionInfo());
+                        break;
+                    case "Devices":
+                        _ = PreferencesFrame.Navigate(typeof(Devices), null, new SuppressNavigationTransitionInfo());
+                        break;
+                }
+            }
+        }
+        private void NavigationView_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (Microsoft.UI.Xaml.Controls.NavigationViewItemBase item in PreferencesNavView.MenuItems)
+            {
+                if (item is Microsoft.UI.Xaml.Controls.NavigationViewItem && item.Tag?.ToString() == "Workspace")
+                {
+                    PreferencesNavView.SelectedItem = item;
+                    break;
+                }
+            }
+            _ = PreferencesFrame.Navigate(typeof(Workspace), null, new SuppressNavigationTransitionInfo());
         }
         private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

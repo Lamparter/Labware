@@ -311,7 +311,7 @@ namespace Riverside.Labware
         }
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-            FeatureNotAvailable logWin = new();
+            FeatureNotAvailableDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
@@ -354,12 +354,12 @@ namespace Riverside.Labware
         }
         private void VMSettings_Click(object sender, RoutedEventArgs e)
         {
-            VMSettings logWin = new();
+            VMSettingsDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            AboutWindow logWin = new();
+            AboutDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
@@ -376,17 +376,17 @@ namespace Riverside.Labware
         }
         private void MessageLog_Click(object sender, RoutedEventArgs e)
         {
-            MessageLog logWin = new();
+            MessageLogDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void VMMessageLog_Click(object sender, RoutedEventArgs e)
         {
-            MessageLog logWin = new();
+            MessageLogDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
         private void Preferences_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow logWin = new();
+            SettingsDialog logWin = new();
             CreateModalWindow(App.m_window, logWin, true, true);
         }
     }

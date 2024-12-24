@@ -1,19 +1,19 @@
 <winex:WindowEx
-    x:Class="Riverside.Labware.Dialogs.FeatureNotAvailable"
+    x:Class="Riverside.Labware.Dialogs.AboutDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Riverside.Labware.Dialogs"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:winex="using:WinUIEx"
-    Title="Feature not available"
+    Title="About App"
     IsMaximizable="False"
     IsMinimizable="False"
     IsResizable="False"
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
-        <MicaBackdrop />
+        <DesktopAcrylicBackdrop />
     </Window.SystemBackdrop>
 
     <Page>
@@ -102,46 +102,100 @@
         </Page.Resources>
         <Grid>
             <winex:TitleBar
-                x:Name="FeatureNotAvailableTitleBar"
-                Title="Error"
+                x:Name="AboutWindowTitleBar"
+                Title="About App"
                 Height="32"
                 VerticalAlignment="Top"
                 Background="Transparent">
                 <winex:TitleBar.IconSource>
-                    <FontIconSource Glyph="&#xEA39;" />
+                    <FontIconSource Glyph="&#xE946;" />
                 </winex:TitleBar.IconSource>
             </winex:TitleBar>
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                <FontIcon
+            <Grid
+                Margin="12,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel Margin="0,2,0,0" VerticalAlignment="Center">
+                        <Image
+                            Width="64"
+                            Height="64"
+                            VerticalAlignment="Center"
+                            Source="ms-appx:///Assets/AppTiles/StoreLogo.scale-400.png" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="24"
+                            FontWeight="SemiBold"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="Labware" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="16"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="0.2 Preview" />
+                        <TextBlock
+                            x:Name="CompileDate"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="16"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="Compilation date" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel
+                    Margin="0,100,0,0"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="60"
-                    Glyph="&#xEA39;" />
-                <TextBlock
-                    x:Uid="NotAvailableString"
-                    Margin="0,65,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="24"
-                    FontWeight="Bold"
-                    Style="{StaticResource CaptionTextBlockStyle}"
-                    Text="This feature is not available" />
+                    VerticalAlignment="Top">
+                    <StackPanel
+                        Margin="0,54,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            FontSize="30"
+                            FontWeight="SemiBold"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="Developers" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="24"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="Alloyd" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="24"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="ErrorTek" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="24"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="Ivirius" />
+                    </StackPanel>
+                </StackPanel>
             </Grid>
-            <StackPanel
-                HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Orientation="Horizontal">
+            <Grid
+                x:Name="BottomItems"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom">
                 <Button
                     x:Name="OKButton"
-                    x:Uid="OKButtonString"
+                    x:Uid="OKString"
                     Height="35"
                     Margin="0,0,10,10"
+                    HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Click="OKButton_Click"
                     Content="OK"
                     IsTabStop="False"
                     UseSystemFocusVisuals="False" />
-            </StackPanel>
+            </Grid>
         </Grid>
     </Page>
 </winex:WindowEx>

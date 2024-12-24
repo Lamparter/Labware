@@ -17,8 +17,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Dialogs\FeatureNotAvailable.xaml" />
-    <None Remove="Dialogs\MessageLog.xaml" />
     <None Remove="LoadingWindow.xaml" />
     <None Remove="NewVMWizardPages\Compatibility.xaml" />
     <None Remove="NewVMWizardPages\DiskCapacity.xaml" />
@@ -132,7 +130,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Dialogs\MessageLog.xaml">
+    <Page Update="Dialogs\MessageLogDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -177,7 +175,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Dialogs\FeatureNotAvailable.xaml">
+    <Page Update="Dialogs\FeatureNotAvailableDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

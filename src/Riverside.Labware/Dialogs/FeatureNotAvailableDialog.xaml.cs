@@ -3,11 +3,9 @@ using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Media.Animation;
 using Riverside.Labware.Helpers;
 using Riverside.Labware.Core.PInvoke.Comctl32;
 using Riverside.Labware.Core.PInvoke.User32;
-using Riverside.Labware.VMSettingsPages;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -16,9 +14,9 @@ using Windows.Graphics;
 using WinUIEx;
 using WinUIEx.Messaging;
 
-namespace Riverside.Labware
+namespace Riverside.Labware.Dialogs
 {
-    public sealed partial class VMSettings : WindowEx, INotifyPropertyChanged
+    public sealed partial class FeatureNotAvailableDialog : WindowEx, INotifyPropertyChanged
     {
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
@@ -40,13 +38,13 @@ namespace Riverside.Labware
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly WindowMessageMonitor _msgMonitor;
-        public VMSettings()
+        public FeatureNotAvailableDialog()
         {
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;
-            AppWindow.Resize(new SizeInt32(800, 700));
+            AppWindow.Resize(new SizeInt32(400, 250));
             this.CenterOnScreen();
-            SetTitleBar(VMSettingsWindowTitleBar);
+            SetTitleBar(FeatureNotAvailableTitleBar);
 
             _msgMonitor = new WindowMessageMonitor(this);
             _msgMonitor.WindowMessageReceived += (_, e) =>
@@ -202,25 +200,6 @@ namespace Riverside.Labware
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
-        {
-            if (args.SelectedItem is NavigationViewItem selectedItem)
-            {
-                switch (selectedItem.Tag)
-                {
-                    case "Hardware":
-                        _ = VMSettingsFrame.Navigate(typeof(Hardware), null, new SuppressNavigationTransitionInfo());
-                        break;
-                    case "Options":
-                        _ = VMSettingsFrame.Navigate(typeof(Options), null, new SuppressNavigationTransitionInfo());
-                        break;
-                }
-            }
         }
     }
 }

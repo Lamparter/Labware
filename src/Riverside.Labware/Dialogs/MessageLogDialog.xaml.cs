@@ -16,7 +16,7 @@ using WinUIEx.Messaging;
 
 namespace Riverside.Labware.Dialogs
 {
-    public sealed partial class MessageLog : WindowEx, INotifyPropertyChanged
+    public sealed partial class MessageLogDialog : WindowEx, INotifyPropertyChanged
     {
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
@@ -38,7 +38,7 @@ namespace Riverside.Labware.Dialogs
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly WindowMessageMonitor _msgMonitor;
-        public MessageLog()
+        public MessageLogDialog()
         {
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;
