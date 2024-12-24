@@ -193,6 +193,8 @@
     <ProjectReference Include="..\Riverside.Labware.Core\Riverside.Labware.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="UserControls\" />
+    <Folder Include="ViewModels\UserControls\" />
     <Folder Include="Views\VirtualMachine\CreationWizard\" />
     <Folder Include="Views\VirtualMachine\Settings\" />
   </ItemGroup>
