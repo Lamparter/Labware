@@ -2,36 +2,117 @@
     x:Class="Riverside.Labware.Views.Settings.Input"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
         <StackPanel Padding="10,0,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                <TextBlock Text="Keyboard and mouse" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <CheckBox Content="Grab keyboard and input on mouse click" FontSize="16" IsChecked="True" UseSystemFocusVisuals="False" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top"/>
-                <CheckBox Content="Grab keyboard and input on key press" Margin="0,63,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Keyboard and mouse" />
+                <CheckBox
+                    Margin="0,31,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Content="Grab keyboard and input on mouse click"
+                    FontSize="16"
+                    IsChecked="True"
+                    UseSystemFocusVisuals="False" />
+                <CheckBox
+                    Margin="0,63,0,0"
+                    VerticalAlignment="Top"
+                    Content="Grab keyboard and input on key press"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
             </Grid>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
-                <TextBlock Text="Cursor" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <TextBlock Text="You may need to install VMsTools for these options to work correctly." HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Top" Margin="0,32,0,0"/>
-                <CheckBox Content="Automatically grab and ungrab the mouse" Margin="0,58,0,0" VerticalAlignment="Top" FontSize="16" IsChecked="True" UseSystemFocusVisuals="False"/>
-                <CheckBox Content="Hide cursor on ungrab" Margin="0,90,0,0" VerticalAlignment="Top" IsChecked="True" FontSize="16" UseSystemFocusVisuals="False"/>
+            <Grid
+                Margin="0,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Cursor" />
+                <TextBlock
+                    Margin="0,32,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="You may need to install VMsTools for these options to work correctly." />
+                <CheckBox
+                    Margin="0,58,0,0"
+                    VerticalAlignment="Top"
+                    Content="Automatically grab and ungrab the mouse"
+                    FontSize="16"
+                    IsChecked="True"
+                    UseSystemFocusVisuals="False" />
+                <CheckBox
+                    Margin="0,90,0,0"
+                    VerticalAlignment="Top"
+                    Content="Hide cursor on ungrab"
+                    FontSize="16"
+                    IsChecked="True"
+                    UseSystemFocusVisuals="False" />
             </Grid>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0">
-                <TextBlock Text="Optimize mouse for games:" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,6,0,0"/>
-                <ComboBox Text="Automatic" Margin="206,0,0,0" UseSystemFocusVisuals="False" FontSize="16">
+            <Grid
+                Margin="0,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+                <TextBlock
+                    Margin="0,6,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="Optimize mouse for games:" />
+                <ComboBox
+                    Margin="206,0,0,0"
+                    FontSize="16"
+                    Text="Automatic"
+                    UseSystemFocusVisuals="False">
                     <ComboBox.Items>
-                        <ComboBoxItem Content="Automatic" IsSelected="True" UseSystemFocusVisuals="False" FontSize="16"/>
-                        <ComboBoxItem Content="Always" UseSystemFocusVisuals="False" FontSize="16"/>
-                        <ComboBoxItem Content="Never" UseSystemFocusVisuals="False" FontSize="16"/>
+                        <ComboBoxItem
+                            Content="Automatic"
+                            FontSize="16"
+                            IsSelected="True"
+                            UseSystemFocusVisuals="False" />
+                        <ComboBoxItem
+                            Content="Always"
+                            FontSize="16"
+                            UseSystemFocusVisuals="False" />
+                        <ComboBoxItem
+                            Content="Never"
+                            FontSize="16"
+                            UseSystemFocusVisuals="False" />
                     </ComboBox.Items>
                 </ComboBox>
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,47,0,0">
-                    <FontIcon Glyph="&#xE946;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="0,0,0,0"/>
-                    <TextBlock Text="Change this option if you have trouble with mouse motion in some applications." FontSize="16" HorizontalAlignment="Left" Width="550" TextWrapping="Wrap" VerticalAlignment="Top" Margin="25,0,0,0"/>
+                <Grid
+                    Margin="0,47,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+                    <FontIcon
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="20"
+                        Glyph="&#xE946;" />
+                    <TextBlock
+                        Width="550"
+                        Margin="25,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="16"
+                        Text="Change this option if you have trouble with mouse motion in some applications."
+                        TextWrapping="Wrap" />
                 </Grid>
             </Grid>
         </StackPanel>

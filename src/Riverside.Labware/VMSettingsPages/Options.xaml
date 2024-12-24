@@ -2,81 +2,91 @@
     x:Class="Riverside.Labware.VMSettingsPages.Options"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.VMSettingsPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.VMSettingsPages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <Grid>
-        <NavigationView x:Name="OptionsNavView" IsSettingsVisible="False" OpenPaneLength="220" SelectionChanged="OptionsNavView_SelectionChanged" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False">
+        <NavigationView
+            x:Name="OptionsNavView"
+            IsBackButtonVisible="Collapsed"
+            IsPaneToggleButtonVisible="False"
+            IsSettingsVisible="False"
+            OpenPaneLength="220"
+            PaneDisplayMode="Left"
+            SelectionChanged="OptionsNavView_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Tag="General" Content="General" IsSelected="True">
+                <NavigationViewItem
+                    Content="General"
+                    IsSelected="True"
+                    Tag="General">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE977;"/>
+                        <FontIcon Glyph="&#xE977;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Power" Content="Power">
+                <NavigationViewItem Content="Power" Tag="Power">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE102;"/>
+                        <FontIcon Glyph="&#xE102;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="SharedFolders" Content="Shared Folders">
+                <NavigationViewItem Content="Shared Folders" Tag="SharedFolders">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE8B7;"/>
+                        <FontIcon Glyph="&#xE8B7;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Snapshots" Content="Snapshots">
+                <NavigationViewItem Content="Snapshots" Tag="Snapshots">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xF739;"/>
+                        <FontIcon Glyph="&#xF739;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="AutoProtect" Content="AutoProtect">
+                <NavigationViewItem Content="AutoProtect" Tag="AutoProtect">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xF738;"/>
+                        <FontIcon Glyph="&#xF738;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="GuestIsolation" Content="Guest Isolation">
+                <NavigationViewItem Content="Guest Isolation" Tag="GuestIsolation">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE72E;"/>
+                        <FontIcon Glyph="&#xE72E;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="AccessControl" Content="Access Control">
+                <NavigationViewItem Content="Access Control" Tag="AccessControl">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEE3F;"/>
+                        <FontIcon Glyph="&#xEE3F;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="VMsTools" Content="VMsTools">
+                <NavigationViewItem Content="VMsTools" Tag="VMsTools">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEC7A;"/>
+                        <FontIcon Glyph="&#xEC7A;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="VNCConnections" Content="VNC Connections">
+                <NavigationViewItem Content="VNC Connections" Tag="VNCConnections">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE148;"/>
+                        <FontIcon Glyph="&#xE148;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Unity" Content="Unity">
+                <NavigationViewItem Content="Unity" Tag="Unity">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE2AE;"/>
+                        <FontIcon Glyph="&#xE2AE;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="ApplianceView" Content="Appliance View">
+                <NavigationViewItem Content="Appliance View" Tag="ApplianceView">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE12A;"/>
+                        <FontIcon Glyph="&#xE12A;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Autologin" Content="Autologin">
+                <NavigationViewItem Content="Autologin" Tag="Autologin">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE1A6;"/>
+                        <FontIcon Glyph="&#xE1A6;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Advanced" Content="Advanced">
+                <NavigationViewItem Content="Advanced" Tag="Advanced">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE9D9;"/>
+                        <FontIcon Glyph="&#xE9D9;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-            <Frame x:Name="OptionsFrame"/>
+            <Frame x:Name="OptionsFrame" />
         </NavigationView>
     </Grid>
 </Page>

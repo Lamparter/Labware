@@ -194,7 +194,7 @@
                     Click="OKButton_Click"
                     Content="OK"
                     IsTabStop="False"
-                    UseSystemFocusVisuals="False"/>
+                    UseSystemFocusVisuals="False" />
             </Grid>
         </Grid>
     </Page>

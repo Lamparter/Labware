@@ -2,25 +2,78 @@
     x:Class="Riverside.Labware.Views.Settings.Memory"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
         <StackPanel Padding="10,0,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                <TextBlock Text="Reserved memory" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <TextBlock Text="How much host RAM should the system be able to reserve for all running virtual machines?" HorizontalAlignment="Center" TextWrapping="Wrap" Width="600" VerticalAlignment="Top" FontSize="16" Margin="0,32,0,0"/>
-                <Slider HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Width="300" UseSystemFocusVisuals="False" TickFrequency="8136" TickPlacement="BottomRight" Value="6356" Minimum="128" Maximum="8136"/>
-                <NumberBox SpinButtonPlacementMode="Compact" Text="6356" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,80,0,0" FontSize="16" UseSystemFocusVisuals="False"/>
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Reserved memory" />
+                <TextBlock
+                    Width="600"
+                    Margin="0,32,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="How much host RAM should the system be able to reserve for all running virtual machines?"
+                    TextWrapping="Wrap" />
+                <Slider
+                    Width="300"
+                    Margin="0,80,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Maximum="8136"
+                    Minimum="128"
+                    TickFrequency="8136"
+                    TickPlacement="BottomRight"
+                    UseSystemFocusVisuals="False"
+                    Value="6356" />
+                <NumberBox
+                    Margin="305,80,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    SpinButtonPlacementMode="Compact"
+                    Text="6356"
+                    UseSystemFocusVisuals="False" />
             </Grid>
-            <RadioButtons Header="Additional memory" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedIndex="1" Margin="0,10,0,0">
-                <RadioButton Content="Fit all virtual machine memory into reserved host RAM" UseSystemFocusVisuals="False" FontSize="16"/>
-                <RadioButton Content="Allow some virtual machine memory to be swapped" UseSystemFocusVisuals="False" FontSize="16"/>
-                <RadioButton Content="Allow most virtual machine memory to be swapped" UseSystemFocusVisuals="False" FontSize="16"/>
+            <RadioButtons
+                Margin="0,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="14"
+                FontWeight="Bold"
+                Header="Additional memory"
+                SelectedIndex="1">
+                <RadioButton
+                    Content="Fit all virtual machine memory into reserved host RAM"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <RadioButton
+                    Content="Allow some virtual machine memory to be swapped"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <RadioButton
+                    Content="Allow most virtual machine memory to be swapped"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
             </RadioButtons>
-            <TextBlock Text="Swapping virtual machine memory allows more virtual machines to run but can degrade system performance if the virtual machines use their memory intensively." FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="550" TextWrapping="Wrap"/>
+            <TextBlock
+                Width="550"
+                Margin="0,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                Text="Swapping virtual machine memory allows more virtual machines to run but can degrade system performance if the virtual machines use their memory intensively."
+                TextWrapping="Wrap" />
         </StackPanel>
     </Grid>
 </Page>

@@ -2,45 +2,181 @@
     x:Class="Riverside.Labware.Views.Settings.Display"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
-        <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top">
-            <FontIcon Glyph="&#xE770;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-            <TextBlock Text="Display" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+        <Grid
+            x:Name="TitleGrid"
+            Height="48"
+            VerticalAlignment="Top">
+            <FontIcon
+                Margin="10,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="24"
+                Glyph="&#xE770;" />
+            <TextBlock
+                Margin="45,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="24"
+                FontWeight="Black"
+                Style="{StaticResource CaptionTextBlockStyle}"
+                Text="Display" />
         </Grid>
         <ScrollViewer Margin="0,48,0,0">
             <StackPanel Padding="10,0,0,0">
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <TextBlock Text="Autofit" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                    <CheckBox Content="Autofit window" IsChecked="True" VerticalAlignment="Top" Margin="0,32,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <TextBlock Text="When the virtual machine display settings change, resize the application window to match." HorizontalAlignment="Left" FontSize="16" Width="550" TextWrapping="Wrap" Margin="0,64,0,0"/>
-                    <CheckBox Content="Autofit guest" IsChecked="True" VerticalAlignment="Top" Margin="0,112,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <TextBlock Text="When the application window is resized, change the virtual machine display settings to match." HorizontalAlignment="Left" FontSize="16" TextWrapping="Wrap" Width="550" VerticalAlignment="Top" Margin="0,144,0,0"/>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        Style="{StaticResource CaptionTextBlockStyle}"
+                        Text="Autofit" />
+                    <CheckBox
+                        Margin="0,32,0,0"
+                        VerticalAlignment="Top"
+                        Content="Autofit window"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <TextBlock
+                        Width="550"
+                        Margin="0,64,0,0"
+                        HorizontalAlignment="Left"
+                        FontSize="16"
+                        Text="When the virtual machine display settings change, resize the application window to match."
+                        TextWrapping="Wrap" />
+                    <CheckBox
+                        Margin="0,112,0,0"
+                        VerticalAlignment="Top"
+                        Content="Autofit guest"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <TextBlock
+                        Width="550"
+                        Margin="0,144,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="16"
+                        Text="When the application window is resized, change the virtual machine display settings to match."
+                        TextWrapping="Wrap" />
                 </Grid>
-                <RadioButtons Header="Full screen" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
-                    <RadioButton Content="Autofit guest (change guest resolution)" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
-                    <RadioButton Content="Center guest (no resolution change)" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
+                <RadioButtons
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Header="Full screen"
+                    SelectedIndex="0">
+                    <RadioButton
+                        Content="Autofit guest (change guest resolution)"
+                        FontSize="16"
+                        FontWeight="Normal"
+                        UseSystemFocusVisuals="False" />
+                    <RadioButton
+                        Content="Center guest (no resolution change)"
+                        FontSize="16"
+                        FontWeight="Normal"
+                        UseSystemFocusVisuals="False" />
                 </RadioButtons>
-                <RadioButtons Header="Color Theme" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" SelectedIndex="0">
-                    <RadioButton Content="System (use app mode of Host OS)" IsChecked="True" FontWeight="Normal" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <RadioButton Content="Light" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
-                    <RadioButton Content="Dark" UseSystemFocusVisuals="False" FontWeight="Normal" FontSize="16"/>
+                <RadioButtons
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Header="Color Theme"
+                    SelectedIndex="0">
+                    <RadioButton
+                        Content="System (use app mode of Host OS)"
+                        FontSize="16"
+                        FontWeight="Normal"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <RadioButton
+                        Content="Light"
+                        FontSize="16"
+                        FontWeight="Normal"
+                        UseSystemFocusVisuals="False" />
+                    <RadioButton
+                        Content="Dark"
+                        FontSize="16"
+                        FontWeight="Normal"
+                        UseSystemFocusVisuals="False" />
                 </RadioButtons>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
-                    <TextBlock Text="Graphics" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                    <CheckBox Content="Hardware acceleration for remote virtual machine" VerticalAlignment="Top" Margin="0,32,0,0" UseSystemFocusVisuals="False" HorizontalAlignment="Center" FontSize="16"/>
+                <Grid
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        Style="{StaticResource CaptionTextBlockStyle}"
+                        Text="Graphics" />
+                    <CheckBox
+                        Margin="0,32,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Content="Hardware acceleration for remote virtual machine"
+                        FontSize="16"
+                        UseSystemFocusVisuals="False" />
                 </Grid>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
-                    <TextBlock Text="Menu and toolbar" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                    <CheckBox Content="Use a single button for power controls" VerticalAlignment="Top" IsChecked="True" Margin="0,32,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <CheckBox Content="Use a single button for stretch controls" IsChecked="True" Margin="0,64,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <CheckBox Content="Combine toolbar with menubar in windowed mode" VerticalAlignment="Top" IsChecked="True" Margin="0,96,0,0" UseSystemFocusVisuals="False" HorizontalAlignment="Center" FontSize="16"/>
-                    <CheckBox Content="Combine tabs with toolbar in full screen" VerticalAlignment="Top" IsChecked="True" Margin="0,128,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
-                    <CheckBox Content="Show toolbar edge when unpinned in full screen" VerticalAlignment="Top" IsChecked="True" Margin="0,160,0,0" UseSystemFocusVisuals="False" FontSize="16"/>
+                <Grid
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        Style="{StaticResource CaptionTextBlockStyle}"
+                        Text="Menu and toolbar" />
+                    <CheckBox
+                        Margin="0,32,0,0"
+                        VerticalAlignment="Top"
+                        Content="Use a single button for power controls"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <CheckBox
+                        Margin="0,64,0,0"
+                        VerticalAlignment="Top"
+                        Content="Use a single button for stretch controls"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <CheckBox
+                        Margin="0,96,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Content="Combine toolbar with menubar in windowed mode"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <CheckBox
+                        Margin="0,128,0,0"
+                        VerticalAlignment="Top"
+                        Content="Combine tabs with toolbar in full screen"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
+                    <CheckBox
+                        Margin="0,160,0,0"
+                        VerticalAlignment="Top"
+                        Content="Show toolbar edge when unpinned in full screen"
+                        FontSize="16"
+                        IsChecked="True"
+                        UseSystemFocusVisuals="False" />
                 </Grid>
             </StackPanel>
         </ScrollViewer>

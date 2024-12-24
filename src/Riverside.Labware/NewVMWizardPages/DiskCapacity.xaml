@@ -2,28 +2,111 @@
     x:Class="Riverside.Labware.NewVMWizardPages.DiskCapacity"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.NewVMWizardPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.NewVMWizardPages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
         <Grid VerticalAlignment="Top">
-            <TextBlock Text="Specify Disk Capacity" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <TextBlock Text="How large do you want this disk to be?" Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
+            <TextBlock
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="20"
+                FontWeight="Bold"
+                Style="{StaticResource CaptionTextBlockStyle}"
+                Text="Specify Disk Capacity" />
+            <TextBlock
+                Margin="10,42,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Style="{StaticResource CaptionTextBlockStyle}"
+                Text="How large do you want this disk to be?" />
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine." TextAlignment="Center" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Width="420"/>
-            <TextBlock Text="Maximum disk size (GB):" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="0,100,0,0"/>
-            <NumberBox Value="60" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" SpinButtonPlacementMode="Compact" Margin="198,94,0,0" Width="100" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Recommended size for LabwareOS: 60 GB" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,133,0,0"/>
-            <RadioButton Content="Store virtual disk as a single file" FontWeight="Bold" FontSize="16" Margin="0,159,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
-            <RadioButton Content="Split virtual disk into multiple files" FontWeight="Bold" FontSize="16" IsChecked="True" Margin="0,191,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False"/>
-            <TextBlock Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks." TextAlignment="Center" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="400" Margin="0,223,0,0"/>
+            <TextBlock
+                Width="420"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="The virtual machine's hard disk is stored as one or more files on the host computer's physical disk. These file(s) start small and become larger as you add applications, files, and data to your virtual machine."
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="0,100,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Maximum disk size (GB):" />
+            <NumberBox
+                Width="100"
+                Margin="198,94,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                SpinButtonPlacementMode="Compact"
+                UseSystemFocusVisuals="False"
+                Value="60" />
+            <TextBlock
+                Margin="0,133,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Recommended size for LabwareOS: 60 GB" />
+            <RadioButton
+                Margin="0,159,0,0"
+                VerticalAlignment="Top"
+                Content="Store virtual disk as a single file"
+                FontSize="16"
+                FontWeight="Bold"
+                UseSystemFocusVisuals="False" />
+            <RadioButton
+                Margin="0,191,0,0"
+                VerticalAlignment="Top"
+                Content="Split virtual disk into multiple files"
+                FontSize="16"
+                FontWeight="Bold"
+                IsChecked="True"
+                UseSystemFocusVisuals="False" />
+            <TextBlock
+                Width="400"
+                Margin="0,223,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Splitting the disk makes it easier to move the virtual machine to another computer but may reduce performance with very large disks."
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
         </Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Padding="0,0,10,10">
-            <Button x:Name="BackButton" Margin="0,0,10,0" FontSize="16" Content="Back" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="BackButton_Click"/>
-            <Button x:Name="NextButton" Content="Next" FontSize="16" UseSystemFocusVisuals="False" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="NextButton_Click"/>
+        <StackPanel
+            Padding="0,0,10,10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Orientation="Horizontal">
+            <Button
+                x:Name="BackButton"
+                Margin="0,0,10,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="BackButton_Click"
+                Content="Back"
+                FontSize="16"
+                UseSystemFocusVisuals="False" />
+            <Button
+                x:Name="NextButton"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="NextButton_Click"
+                Content="Next"
+                FontSize="16"
+                UseSystemFocusVisuals="False" />
         </StackPanel>
     </Grid>
 </Page>

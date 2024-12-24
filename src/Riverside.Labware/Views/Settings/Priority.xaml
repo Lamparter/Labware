@@ -2,36 +2,94 @@
     x:Class="Riverside.Labware.Views.Settings.Priority"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
         <StackPanel Padding="10,0,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                <TextBlock Text="Default process priority" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <TextBlock Text="Input grabbed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="16"/>
-                <ComboBox Text="Normal" Margin="128,32,0,0" UseSystemFocusVisuals="False" FontSize="16">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Default process priority" />
+                <TextBlock
+                    Margin="0,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="Input grabbed:" />
+                <ComboBox
+                    Margin="128,32,0,0"
+                    FontSize="16"
+                    Text="Normal"
+                    UseSystemFocusVisuals="False">
                     <ComboBox.Items>
-                        <ComboBoxItem Content="Normal" IsSelected="True" FontSize="16"/>
-                        <ComboBoxItem Content="High" FontSize="16"/>
+                        <ComboBoxItem
+                            Content="Normal"
+                            FontSize="16"
+                            IsSelected="True" />
+                        <ComboBoxItem Content="High" FontSize="16" />
                     </ComboBox.Items>
                 </ComboBox>
-                <TextBlock Text="Input ungrabbed:" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,74,0,0"/>
-                <ComboBox Text="Normal" Margin="128,69,0,0" UseSystemFocusVisuals="False" FontSize="16">
+                <TextBlock
+                    Margin="0,74,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="Input ungrabbed:" />
+                <ComboBox
+                    Margin="128,69,0,0"
+                    FontSize="16"
+                    Text="Normal"
+                    UseSystemFocusVisuals="False">
                     <ComboBox.Items>
-                        <ComboBoxItem Content="Low" FontSize="16"/>
-                        <ComboBoxItem Content="Normal" IsSelected="True" FontSize="16"/>
+                        <ComboBoxItem Content="Low" FontSize="16" />
+                        <ComboBoxItem
+                            Content="Normal"
+                            FontSize="16"
+                            IsSelected="True" />
                     </ComboBox.Items>
                 </ComboBox>
-                <TextBlock Text="A virtual machine's local settings will override these global settings." FontSize="16" Margin="0,106,0,0"/>
+                <TextBlock
+                    Margin="0,106,0,0"
+                    FontSize="16"
+                    Text="A virtual machine's local settings will override these global settings." />
             </Grid>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
-                <TextBlock Text="Snapshots" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <CheckBox Content="Take snapshots in the background when possible" Margin="0,32,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
-                <CheckBox Content="Restore snapshots in the background when possible" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
-                <TextBlock Text="Virtual machines must be powered off for background snapshot changes to take effect." Width="530" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="16" Margin="0,101,0,0"/>
+            <Grid
+                Margin="0,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Snapshots" />
+                <CheckBox
+                    Margin="0,32,0,0"
+                    VerticalAlignment="Top"
+                    Content="Take snapshots in the background when possible"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <CheckBox
+                    Margin="0,64,0,0"
+                    VerticalAlignment="Top"
+                    Content="Restore snapshots in the background when possible"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <TextBlock
+                    Width="530"
+                    Margin="0,101,0,0"
+                    HorizontalAlignment="Left"
+                    FontSize="16"
+                    Text="Virtual machines must be powered off for background snapshot changes to take effect."
+                    TextWrapping="Wrap" />
             </Grid>
         </StackPanel>
     </Grid>

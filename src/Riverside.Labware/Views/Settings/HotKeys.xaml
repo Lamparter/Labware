@@ -2,25 +2,85 @@
     x:Class="Riverside.Labware.Views.Settings.HotKeys"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.Views.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
         <StackPanel Padding="10,0,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                <TextBlock Text="Hot key combination" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <TextBlock Text="Hot keys provide a shortcut to commonly-used virtual machine operations. Click the buttons below to modify your hot keys." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="0,24,0,0" TextWrapping="Wrap" Width="550"/>
-                <ToggleButton Content="Ctrl" IsChecked="True" Margin="0,72,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
-                <ToggleButton Content="Shift" Margin="54,72,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
-                <ToggleButton Content="Alt" IsChecked="True" Margin="115,72,0,0" UseSystemFocusVisuals="False" VerticalAlignment="Top" FontSize="16"/>
-                <ToggleButton Content="Win" Margin="164,72,0,0" UseSystemFocusVisuals="False" VerticalAlignment="Top" FontSize="16"/>
-                <TextBlock Text="To release control from the current virtual machine, press Ctrl+Alt." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="0,111,0,0"/>
-                <TextBlock Text="To enter or leave full screen mode, press Ctrl+Alt+Enter." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="0,137,0,0"/>
-                <TextBlock Text="To switch to the previous full-screen virtual machine, press Ctrl+Alt+Left Arrow." HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,163,0,0"/>
-                <TextBlock Text="To switch to the next full-screen virtual machine, press Ctrl+Alt+Right Arrow." HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,215,0,0"/>
-                <TextBlock Text="To show the multiple-monitor layout menu, press Ctrl+Alt+M." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="0,189,0,0"/>
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Hot key combination" />
+                <TextBlock
+                    Width="550"
+                    Margin="0,24,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="Hot keys provide a shortcut to commonly-used virtual machine operations. Click the buttons below to modify your hot keys."
+                    TextWrapping="Wrap" />
+                <ToggleButton
+                    Margin="0,72,0,0"
+                    VerticalAlignment="Top"
+                    Content="Ctrl"
+                    FontSize="16"
+                    IsChecked="True"
+                    UseSystemFocusVisuals="False" />
+                <ToggleButton
+                    Margin="54,72,0,0"
+                    VerticalAlignment="Top"
+                    Content="Shift"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <ToggleButton
+                    Margin="115,72,0,0"
+                    VerticalAlignment="Top"
+                    Content="Alt"
+                    FontSize="16"
+                    IsChecked="True"
+                    UseSystemFocusVisuals="False" />
+                <ToggleButton
+                    Margin="164,72,0,0"
+                    VerticalAlignment="Top"
+                    Content="Win"
+                    FontSize="16"
+                    UseSystemFocusVisuals="False" />
+                <TextBlock
+                    Margin="0,111,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="To release control from the current virtual machine, press Ctrl+Alt." />
+                <TextBlock
+                    Margin="0,137,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="To enter or leave full screen mode, press Ctrl+Alt+Enter." />
+                <TextBlock
+                    Margin="0,163,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="To switch to the previous full-screen virtual machine, press Ctrl+Alt+Left Arrow." />
+                <TextBlock
+                    Margin="0,215,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="To switch to the next full-screen virtual machine, press Ctrl+Alt+Right Arrow." />
+                <TextBlock
+                    Margin="0,189,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="16"
+                    Text="To show the multiple-monitor layout menu, press Ctrl+Alt+M." />
             </Grid>
         </StackPanel>
     </Grid>

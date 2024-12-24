@@ -2,34 +2,104 @@
     x:Class="Riverside.Labware.TabPages.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.TabPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.TabPages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left" Padding="20,0,0,15">
-            <FontIcon Glyph="&#xEBDA;" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock FontWeight="Bold" FontSize="30" Text="Labware Developers" Margin="10,0,0,0"/>
+        <StackPanel
+            Padding="20,0,0,15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Orientation="Horizontal">
+            <FontIcon
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="30"
+                Glyph="&#xEBDA;" />
+            <TextBlock
+                Margin="10,0,0,0"
+                FontSize="30"
+                FontWeight="Bold"
+                Text="Labware Developers" />
         </StackPanel>
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
-            <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Center" Height="72" Width="72"/>
-            <TextBlock FontWeight="Bold" FontSize="60" Text="Labware" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,0,0,0"/>
+        <Grid
+            Margin="0,50,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <FontIcon
+                Width="72"
+                Height="72"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="60"
+                Glyph="&#xE977;" />
+            <TextBlock
+                Margin="90,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="60"
+                FontWeight="Bold"
+                Text="Labware" />
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0">
+        <StackPanel
+            Margin="0,167,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
             <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">
-                <Button x:Name="CreateVMButton" Width="150" Click="CreateVMButton_Click" Height="150" UseSystemFocusVisuals="False" IsTabStop="False">
+                <Button
+                    x:Name="CreateVMButton"
+                    Width="150"
+                    Height="150"
+                    Click="CreateVMButton_Click"
+                    IsTabStop="False"
+                    UseSystemFocusVisuals="False">
                     <Grid Margin="-75,-75,-75,-75">
-                        <FontIcon Glyph="&#xECC8;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock x:Uid="CreateVMString" Text="Create a New Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+                        <FontIcon
+                            Margin="0,-28,0,28"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="45"
+                            Glyph="&#xECC8;" />
+                        <TextBlock
+                            x:Uid="CreateVMString"
+                            Width="100"
+                            Margin="0,75,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="Create a New Virtual Machine"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
                     </Grid>
                 </Button>
             </Grid>
             <Grid x:Name="OpenVMGrid" Padding="5,0,5,0">
-                <Button x:Name="OpenVMButton" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" UseSystemFocusVisuals="False" IsTabStop="False">
+                <Button
+                    x:Name="OpenVMButton"
+                    Width="150"
+                    Height="150"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    IsTabStop="False"
+                    UseSystemFocusVisuals="False">
                     <Grid Margin="-75,-75,-75,-75">
-                        <FontIcon Glyph="&#xE8A7;" Margin="0,-28,0,28" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock x:Uid="OpenVMString" Text="Open a Virtual Machine" TextAlignment="Center" TextWrapping="Wrap" Margin="25,75,25,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+                        <FontIcon
+                            Margin="0,-28,0,28"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="45"
+                            Glyph="&#xE8A7;" />
+                        <TextBlock
+                            x:Uid="OpenVMString"
+                            Width="100"
+                            Margin="25,75,25,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Text="Open a Virtual Machine"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
                     </Grid>
                 </Button>
             </Grid>

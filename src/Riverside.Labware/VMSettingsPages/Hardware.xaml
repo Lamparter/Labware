@@ -2,56 +2,67 @@
     x:Class="Riverside.Labware.VMSettingsPages.Hardware"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Riverside.Labware.VMSettingsPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Riverside.Labware.VMSettingsPages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
-        <NavigationView x:Name="HardwareNavView" IsSettingsVisible="False" IsPaneOpen="False" SelectionChanged="HardwareNavView_SelectionChanged" OpenPaneLength="220" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False">
+        <NavigationView
+            x:Name="HardwareNavView"
+            IsBackButtonVisible="Collapsed"
+            IsPaneOpen="False"
+            IsPaneToggleButtonVisible="False"
+            IsSettingsVisible="False"
+            OpenPaneLength="220"
+            PaneDisplayMode="Left"
+            SelectionChanged="HardwareNavView_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Tag="Memory" Content="Memory" IsSelected="True">
+                <NavigationViewItem
+                    Content="Memory"
+                    IsSelected="True"
+                    Tag="Memory">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE964;"/>
+                        <FontIcon Glyph="&#xE964;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Processors" Content="Processors">
+                <NavigationViewItem Content="Processors" Tag="Processors">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE950;"/>
+                        <FontIcon Glyph="&#xE950;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="HardDisk" Content="Hard Disk (SCSI)">
+                <NavigationViewItem Content="Hard Disk (SCSI)" Tag="HardDisk">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEDA2;"/>
+                        <FontIcon Glyph="&#xEDA2;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="CDDVD" Content="CD/DVD (IDE)">
+                <NavigationViewItem Content="CD/DVD (IDE)" Tag="CDDVD">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE958;"/>
+                        <FontIcon Glyph="&#xE958;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="NetworkAdapter" Content="Network Adapter">
+                <NavigationViewItem Content="Network Adapter" Tag="NetworkAdapter">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEDA3;"/>
+                        <FontIcon Glyph="&#xEDA3;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="USBController" Content="USB Controller">
+                <NavigationViewItem Content="USB Controller" Tag="USBController">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE88E;"/>
+                        <FontIcon Glyph="&#xE88E;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="SoundCard" Content="Sound Card">
+                <NavigationViewItem Content="Sound Card" Tag="SoundCard">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE15D;"/>
+                        <FontIcon Glyph="&#xE15D;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="Display" Content="Display">
+                <NavigationViewItem Content="Display" Tag="Display">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE7F4;"/>
+                        <FontIcon Glyph="&#xE7F4;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-            <Frame x:Name="HardwareFrame"/>
+            <Frame x:Name="HardwareFrame" />
         </NavigationView>
     </Grid>
 </Page>
