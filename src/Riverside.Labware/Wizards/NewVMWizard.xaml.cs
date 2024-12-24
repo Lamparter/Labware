@@ -4,7 +4,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Riverside.Labware.Helpers;
-using Riverside.Labware.NewVMWizardPages;
+using Riverside.Labware.Views.VirtualMachine.CreationWizard;
 using Riverside.Labware.Core.PInvoke.Comctl32;
 using Riverside.Labware.Core.PInvoke.User32;
 using System;

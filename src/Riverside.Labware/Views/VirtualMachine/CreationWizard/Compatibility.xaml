@@ -1,9 +1,9 @@
 <Page
-    x:Class="Riverside.Labware.NewVMWizardPages.OperatingSystem"
+    x:Class="Riverside.Labware.Views.VirtualMachine.CreationWizard.Compatibility"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:Riverside.Labware.NewVMWizardPages"
+    xmlns:local="using:Riverside.Labware.Views.VirtualMachine.CreationWizard"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
@@ -13,80 +13,92 @@
                 Margin="10,10,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontSize="20"
+                FontSize="19"
                 FontWeight="Bold"
                 Style="{StaticResource CaptionTextBlockStyle}"
-                Text="Select a Guest Operating System" />
+                Text="Choose the Virtual Machine Hardware Compatibility" />
             <TextBlock
                 Margin="10,42,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="16"
                 FontWeight="Bold"
-                Style="{StaticResource CaptionTextBlockStyle}"
-                Text="Which operating system will be installed on this virtual machine?"
-                TextAlignment="Center" />
+                Text="Which hardware features are needed for this virtual machine?" />
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
+                Margin="10,10,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="16"
                 FontWeight="Bold"
-                Text="Guest operating system" />
-            <RadioButton
-                x:Name="WindowsOS"
-                x:Uid="1"
-                Margin="0,24,0,0"
-                HorizontalAlignment="Center"
+                Text="Virtual machine hardware compabitility" />
+            <TextBlock
+                Margin="10,41,0,0"
+                HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Checked="HandleCheck"
-                Content="Microsoft Windows"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Hardware compabitility:" />
+            <ComboBox
+                Margin="197,36,0,0"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Labware 0.1.x"
+                UseSystemFocusVisuals="False">
+                <ComboBoxItem
+                    Content="Labware 0.1.x"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    IsSelected="True" />
+            </ComboBox>
+            <TextBlock
+                Margin="10,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Compatible with:" />
+            <CheckBox
+                Margin="197,73,0,0"
+                VerticalAlignment="Top"
+                Content="ESX Server"
                 FontSize="16"
                 FontWeight="Bold"
                 IsChecked="True"
-                UseSystemFocusVisuals="False" />
-            <RadioButton
-                x:Name="LinuxOS"
-                x:Uid="2"
-                Margin="0,56,0,0"
-                VerticalAlignment="Top"
-                Checked="HandleCheck"
-                Content="Linux"
-                FontSize="16"
-                FontWeight="Bold"
-                UseSystemFocusVisuals="False" />
-            <RadioButton
-                x:Name="OtherOS"
-                x:Uid="3"
-                Margin="0,88,0,0"
-                VerticalAlignment="Top"
-                Checked="HandleCheck"
-                Content="Other"
-                FontSize="16"
-                FontWeight="Bold"
-                UseSystemFocusVisuals="False" />
+                IsEnabled="False" />
             <TextBlock
-                Margin="0,130,0,0"
+                Margin="10,119,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="16"
                 FontWeight="Bold"
-                Text="Version" />
-            <ComboBox
-                x:Name="OSSelectionBox"
-                Margin="1,156,0,0"
+                Text="Compatible products:" />
+            <TextBox
+                Margin="10,143,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
                 FontSize="16"
-                IsEnabled="False"
-                Text="LabwareOS">
-                <ComboBox.Items>
-                    <ComboBoxItem
-                        x:Name="LabwareOS"
-                        Content="LabwareOS"
-                        FontSize="16"
-                        IsSelected="True" />
-                </ComboBox.Items>
-            </ComboBox>
+                FontWeight="Bold"
+                IsReadOnly="True"
+                Text="Labware 0.1.x"
+                UseSystemFocusVisuals="False" />
+            <TextBlock
+                Margin="257,119,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                Text="Limitations:" />
+            <TextBox
+                Margin="257,143,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="16"
+                FontWeight="Bold"
+                IsReadOnly="True"
+                Text="No limitations"
+                UseSystemFocusVisuals="False" />
         </Grid>
         <StackPanel
             Padding="0,0,10,10"

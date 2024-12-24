@@ -2,17 +2,19 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 
-namespace Riverside.Labware.NewVMWizardPages
+namespace Riverside.Labware.Views.VirtualMachine.CreationWizard
 {
-    public sealed partial class DiskCapacity : Page
+    public sealed partial class NameVirtualMachine : Page
     {
-        public DiskCapacity()
+        public NameVirtualMachine()
         {
             InitializeComponent();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            _ = Frame.Navigate(typeof(ReadyToCreate), null, new SuppressNavigationTransitionInfo());
+            _ = Main.TypeCustom.IsChecked == true
+                ? Frame.Navigate(typeof(ProcessorConfiguration), null, new SuppressNavigationTransitionInfo())
+                : Frame.Navigate(typeof(DiskCapacity), null, new SuppressNavigationTransitionInfo());
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

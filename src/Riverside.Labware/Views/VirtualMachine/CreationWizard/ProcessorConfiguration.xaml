@@ -1,9 +1,9 @@
 <Page
-    x:Class="Riverside.Labware.NewVMWizardPages.ReadyToCreate"
+    x:Class="Riverside.Labware.Views.VirtualMachine.CreationWizard.ProcessorConfiguration"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="using:Riverside.Labware.NewVMWizardPages"
+    xmlns:local="using:Riverside.Labware.Views.VirtualMachine.CreationWizard"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
@@ -16,7 +16,7 @@
                 FontSize="20"
                 FontWeight="Bold"
                 Style="{StaticResource CaptionTextBlockStyle}"
-                Text="Ready to Create Virtual Machine" />
+                Text="Processor Configuration" />
             <TextBlock
                 Margin="10,42,0,0"
                 HorizontalAlignment="Left"
@@ -24,22 +24,7 @@
                 FontSize="16"
                 FontWeight="Bold"
                 Style="{StaticResource CaptionTextBlockStyle}"
-                Text="Click Finish to create the virtual machine. Then you can install LabwareOS." />
-        </Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <FontIcon
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                FontSize="60"
-                Glyph="&#xEA39;" />
-            <TextBlock
-                Margin="0,65,0,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                FontSize="24"
-                FontWeight="Bold"
-                Style="{StaticResource CaptionTextBlockStyle}"
-                Text="Creating VMs is not possible at this time." />
+                Text="Specify the number of processors for this virtual machine." />
         </Grid>
         <StackPanel
             Padding="0,0,10,10"
@@ -56,11 +41,11 @@
                 FontSize="16"
                 UseSystemFocusVisuals="False" />
             <Button
-                x:Name="FinishButton"
+                x:Name="NextButton"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Click="FinishButton_Click"
-                Content="Finish"
+                Click="NextButton_Click"
+                Content="Next"
                 FontSize="16"
                 UseSystemFocusVisuals="False" />
         </StackPanel>

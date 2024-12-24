@@ -1,7 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
-namespace Riverside.Labware.NewVMWizardPages
+namespace Riverside.Labware.Views.VirtualMachine.CreationWizard
 {
     public sealed partial class ReadyToCreate : Page
     {

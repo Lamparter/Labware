@@ -193,7 +193,7 @@
     <ProjectReference Include="..\Riverside.Labware.Core\Riverside.Labware.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
+    <Folder Include="Views\VirtualMachine\CreationWizard\" />
   </ItemGroup>
 
   <!-- 

@@ -2,19 +2,20 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 
-namespace Riverside.Labware.NewVMWizardPages
+namespace Riverside.Labware.Views.VirtualMachine.CreationWizard
 {
-    public sealed partial class NameVirtualMachine : Page
+    public sealed partial class Installation : Page
     {
-        public NameVirtualMachine()
+        public Installation()
         {
             InitializeComponent();
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            _ = Main.TypeCustom.IsChecked == true
-                ? Frame.Navigate(typeof(ProcessorConfiguration), null, new SuppressNavigationTransitionInfo())
-                : Frame.Navigate(typeof(DiskCapacity), null, new SuppressNavigationTransitionInfo());
+            if (InstallLaterCheck.IsChecked == true)
+            {
+                _ = Frame.Navigate(typeof(OperatingSystem), null, new SuppressNavigationTransitionInfo());
+            }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

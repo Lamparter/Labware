@@ -2,7 +2,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 
-namespace Riverside.Labware.NewVMWizardPages
+namespace Riverside.Labware.Views.VirtualMachine.CreationWizard
 {
     public sealed partial class Main : Page
     {
