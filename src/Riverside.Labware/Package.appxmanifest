@@ -15,8 +15,8 @@
   <mp:PhoneIdentity PhoneProductId="e802ab30-b0b0-4bbe-8d18-d1f36e500044" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Riverside.Labware</DisplayName>
-    <PublisherDisplayName>Alloyd</PublisherDisplayName>
+    <DisplayName>Labware</DisplayName>
+    <PublisherDisplayName>Riverside Valley Corporation</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -34,8 +34,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Riverside.Labware"
-        Description="Riverside.Labware"
+        DisplayName="Labware"
+        Description="Elevate your VM administration with Labware, crafted specifically to address the needs of every power user."
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
