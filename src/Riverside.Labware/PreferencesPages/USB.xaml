@@ -11,7 +11,7 @@
         <StackPanel Padding="10,0,0,0">
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBlock Text="Connections" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                <TextBlock Text="When a new USB device is detected, VMsApp should:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,32,0,0" FontSize="16"/>
+                <TextBlock Text="When a new USB device is detected, Labware should:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,32,0,0" FontSize="16"/>
                 <RadioButton Content="Ask me what to do" IsChecked="True" Margin="0,58,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
                 <RadioButton Content="Connect the device to the host" Margin="0,90,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
                 <RadioButton Content="Connect the device to the foreground virtual machine" Margin="0,122,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16" HorizontalAlignment="Center"/>

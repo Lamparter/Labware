@@ -18,9 +18,9 @@
             <RadioButton x:Name="LinuxOS" x:Uid="2" FontWeight="Bold" FontSize="16" Content="Linux" Margin="0,56,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
             <RadioButton x:Name="OtherOS" x:Uid="3" FontWeight="Bold" FontSize="16" Content="Other" Margin="0,88,0,0" VerticalAlignment="Top" Checked="HandleCheck" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Version" FontWeight="Bold" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,130,0,0"/>
-            <ComboBox x:Name="OSSelectionBox" Text="VMsAppOS" FontSize="16" Margin="1,156,0,0" IsEnabled="False">
+            <ComboBox x:Name="OSSelectionBox" Text="LabwareOS" FontSize="16" Margin="1,156,0,0" IsEnabled="False">
                 <ComboBox.Items>
-                    <ComboBoxItem x:Name="VMsAppOS" Content="VMsAppOS" IsSelected="True" FontSize="16"/>
+                    <ComboBoxItem x:Name="LabwareOS" Content="LabwareOS" IsSelected="True" FontSize="16"/>
                 </ComboBox.Items>
             </ComboBox>
         </Grid>

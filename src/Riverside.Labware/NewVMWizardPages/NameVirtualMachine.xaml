@@ -14,7 +14,7 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Virtual machine name:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="OSName" Text="VMsAppOS" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,26,0,0" Width="337" UseSystemFocusVisuals="False"/>
+            <TextBox x:Name="OSName" Text="LabwareOS" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,26,0,0" Width="337" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Location:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,66,0,0"/>
             <AutoSuggestBox Text="Some location" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" VerticalContentAlignment="Center" IsEnabled="False" Margin="0,92,0,0" Width="392" Height="44"/>
             <Button Height="44" Width="44" Margin="397,92,0,0" FontSize="16" IsEnabled="False" VerticalAlignment="Top" ToolTipService.ToolTip="Browse...">

@@ -15,13 +15,13 @@
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Virtual machine hardware compabitility" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <TextBlock Text="Hardware compabitility:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
-            <ComboBox Text="VMsApp 0.1.x" Margin="197,36,0,0" FontSize="16" FontWeight="Bold" UseSystemFocusVisuals="False">
-                <ComboBoxItem Content="VMsApp 0.1.x" IsSelected="True" FontWeight="Bold" FontSize="16"/>
+            <ComboBox Text="Labware 0.1.x" Margin="197,36,0,0" FontSize="16" FontWeight="Bold" UseSystemFocusVisuals="False">
+                <ComboBoxItem Content="Labware 0.1.x" IsSelected="True" FontWeight="Bold" FontSize="16"/>
             </ComboBox>
             <TextBlock Text="Compatible with:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
             <CheckBox Content="ESX Server" FontSize="16" FontWeight="Bold" IsChecked="True" IsEnabled="False"  Margin="197,73,0,0" VerticalAlignment="Top"/>
             <TextBlock Text="Compatible products:" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,119,0,0"/>
-            <TextBox Text="VMsApp 0.1.x" FontSize="16" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" UseSystemFocusVisuals="False"/>
+            <TextBox Text="Labware 0.1.x" FontSize="16" FontWeight="Bold" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" UseSystemFocusVisuals="False"/>
             <TextBlock Text="Limitations:" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,119,0,0"/>
             <TextBox Text="No limitations" FontWeight="Bold" FontSize="16" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="257,143,0,0" UseSystemFocusVisuals="False"/>
         </Grid>

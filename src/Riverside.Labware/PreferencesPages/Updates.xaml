@@ -12,7 +12,7 @@
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBlock Text="Software updates" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
                 <CheckBox Content="Check for product updates on startup" Margin="0,32,0,0" VerticalAlignment="Top" IsChecked="True" UseSystemFocusVisuals="False" FontSize="16"/>
-                <TextBlock Text="When VMsApp starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Width="570" Margin="0,64,0,0" FontSize="16"/>
+                <TextBlock Text="When Labware starts, check for new versions of the application and installed software components." HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Width="570" Margin="0,64,0,0" FontSize="16"/>
                 <CheckBox Content="Check for software components as needed" IsChecked="True" Margin="0,112,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>
                 <TextBlock Text="When a software component is needed (such as installing VMsTools) check for a new version of the component." HorizontalAlignment="Center" TextWrapping="Wrap" Width="550" VerticalAlignment="Top" Margin="0,144,0,0" FontSize="16"/>
                 <Button Content="Download All Components Now" Margin="0,192,0,0" VerticalAlignment="Top" UseSystemFocusVisuals="False" FontSize="16"/>

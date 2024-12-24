@@ -10,11 +10,11 @@
     <Grid>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left" Padding="20,0,0,15">
             <FontIcon Glyph="&#xEBDA;" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock FontWeight="Bold" FontSize="30" Text="VMsApp Developers" Margin="10,0,0,0"/>
+            <TextBlock FontWeight="Bold" FontSize="30" Text="Labware Developers" Margin="10,0,0,0"/>
         </StackPanel>
         <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
             <FontIcon Glyph="&#xE977;" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Center" Height="72" Width="72"/>
-            <TextBlock FontWeight="Bold" FontSize="60" Text="VMsApp" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,0,0,0"/>
+            <TextBlock FontWeight="Bold" FontSize="60" Text="Labware" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,0,0,0"/>
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0">
             <Grid x:Name="CreateVMGrid" Padding="5,0,5,0">

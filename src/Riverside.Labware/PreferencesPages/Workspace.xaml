@@ -20,7 +20,7 @@
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
                 <TextBlock Text="Virtual Machines" VerticalAlignment="Top" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left"/>
                 <CheckBox Content="Remember opened tabs between sessions" IsChecked="True" Margin="0,32,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
-                <CheckBox Content="Keep VMs running after VMsApp closes" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
+                <CheckBox Content="Keep VMs running after Labware closes" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
                 <CheckBox Content="Enable all shared folders by default" Margin="0,96,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
                 <CheckBox Content="Show Aero Peek thumbnails for open tabs" Margin="0,128,0,0" VerticalAlignment="Top" FontSize="16" UseSystemFocusVisuals="False"/>
             </Grid>
@@ -34,9 +34,9 @@
                     </ComboBox.Items>
                 </ComboBox>
                 <TextBlock Text="Default hardware compatibility:" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="0,43,0,0"/>
-                <ComboBox Text="VMsApp 0.1.x" Margin="226,37,0,0" UseSystemFocusVisuals="False" FontSize="16">
+                <ComboBox Text="Labware 0.1.x" Margin="226,37,0,0" UseSystemFocusVisuals="False" FontSize="16">
                     <ComboBox.Items>
-                        <ComboBoxItem Content="VMsApp 0.1.x" IsSelected="True" FontSize="16" UseSystemFocusVisuals="False"/>
+                        <ComboBoxItem Content="Labware 0.1.x" IsSelected="True" FontSize="16" UseSystemFocusVisuals="False"/>
                     </ComboBox.Items>
                 </ComboBox>
                 <TextBlock Text="Compatible with:" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Top" Margin="99,77,0,0"/>

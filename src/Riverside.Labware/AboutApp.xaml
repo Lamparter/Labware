@@ -128,7 +128,7 @@
                             FontSize="24"
                             FontWeight="SemiBold"
                             Style="{StaticResource CaptionTextBlockStyle}"
-                            Text="VMsApp" />
+                            Text="Labware" />
                         <TextBlock
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"

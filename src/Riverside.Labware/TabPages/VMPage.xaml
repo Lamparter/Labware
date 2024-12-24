@@ -11,7 +11,7 @@
     <Grid>
         <Grid x:Name="TitleGrid" Height="48" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">
         <FontIcon Glyph="&#xE7C4;" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-        <TextBlock Text="VMsAppOS" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
+        <TextBlock Text="LabwareOS" FontSize="24" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,0,0,0"/>
     </Grid>
         <Grid Width="301" Margin="0,48,0,0" HorizontalAlignment="Left" BorderThickness="0,0,1,0" BorderBrush="#5D5D5D">
             <Grid x:Name="VMActionsGrid" Height="80" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="#5D5D5D">

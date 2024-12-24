@@ -14,7 +14,7 @@
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <RadioButton GroupName="VMType" x:FieldModifier="public" x:Name="TypicalRadioButton" FontSize="16" Content="Typical (Recommended)" FontWeight="Bold" VerticalAlignment="Top" IsChecked="{x:Bind TypicalRadioButton.IsChecked, Mode=TwoWay}" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
-            <TextBlock Text="Create a VMsApp 0.1.x virtual machine in a few easy steps." FontSize="16" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="11,32,0,0"/>
+            <TextBlock Text="Create a Labware 0.1.x virtual machine in a few easy steps." FontSize="16" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="11,32,0,0"/>
             <RadioButton GroupName="VMType" x:FieldModifier="public" x:Name="CustomRadioButton" Content="Custom (Advanced)" FontSize="16" FontWeight="Bold" VerticalAlignment="Top" IsChecked="{x:Bind CustomRadioButton.IsChecked, Mode=TwoWay}" Margin="0,66,0,0" UseSystemFocusVisuals="False" HorizontalAlignment="Center"/>
             <TextBlock Text="Create a virtual machine with advanced options." FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,98,0,0"/>
         </Grid>

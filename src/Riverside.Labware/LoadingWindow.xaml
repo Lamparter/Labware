@@ -13,9 +13,9 @@
     <Grid>
         <Image Source="ms-appx:///Assets/StoreLogo.png" Width="125" HorizontalAlignment="Left" Margin="50"/>
         <StackPanel Margin="225, 45, 0, 0">
-            <TextBlock Text="VMsApp" FontSize="22"/>
+            <TextBlock Text="Labware" FontSize="22"/>
             <TextBlock Text="Modern virtualization software" Margin="0, 15, 0, 0"/>
-            <TextBlock Text="Developed by the VMsApp devs"/>
+            <TextBlock Text="Developed by the Labware devs"/>
             <TextBlock Text="0.2 Preview"/>
             <TextBlock Text="Compilation date" x:Name="CompilationText"/>
             <TextBlock Text=""/>

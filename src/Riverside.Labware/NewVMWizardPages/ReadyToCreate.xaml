@@ -10,7 +10,7 @@
     <Grid>
         <Grid VerticalAlignment="Top">
             <TextBlock Text="Ready to Create Virtual Machine" Style="{StaticResource CaptionTextBlockStyle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-            <TextBlock Text="Click Finish to create the virtual machine. Then you can install VMsAppOS." Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
+            <TextBlock Text="Click Finish to create the virtual machine. Then you can install LabwareOS." Style="{StaticResource CaptionTextBlockStyle}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <FontIcon Glyph="&#xEA39;" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
