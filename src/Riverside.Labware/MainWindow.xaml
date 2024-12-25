@@ -103,18 +103,6 @@
                             x:Name="MenuStack"
                             HorizontalAlignment="Left"
                             Orientation="Horizontal">
-                            <Button
-                                x:Name="FileMenu"
-                                Margin="5,0,0,0"
-                                Background="Transparent"
-                                BorderBrush="Transparent"
-                                Content="File" />
-                            <Button
-                                x:Name="EditMenu"
-                                Margin="5,0,0,0"
-                                Background="Transparent"
-                                BorderBrush="Transparent"
-                                Content="Edit" />
                             <MenuBar>
                                 <MenuBarItem
                                     Title="File"

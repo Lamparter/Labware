@@ -16,6 +16,9 @@
 	<ProductVersion>0.2.0</ProductVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+	<PropertyGroup>
+		<SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+	</PropertyGroup>
   <ItemGroup>
     <None Remove="LoadingWindow.xaml" />
     <None Remove="NewVMWizardPages\Compatibility.xaml" />
