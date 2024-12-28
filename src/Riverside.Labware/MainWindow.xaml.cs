@@ -288,10 +288,7 @@ namespace Riverside.Labware
             TabsGrid.Margin = new Thickness(0, 48, 0, 32);
             FolderView.Margin = new Thickness(0, 0, 0, 32);
 
-            if (ShowHideLibrary.IsChecked == true)
-            {
-                ShowHideLibrary.IsChecked = false;
-            }
+            // MenuBar.UncheckShowHideLibrary();
         }
     }
 }

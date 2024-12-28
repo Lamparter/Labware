@@ -12,10 +12,12 @@ namespace Riverside.Labware.UserControls
         {
             InitializeComponent();
 
+            // ShowHideLibrary will be removed in a later version
+            /*
             if (ShowHideLibrary.IsChecked == false)
             {
                 ShowHideLibrary.IsChecked = true;
-            }
+            } */
         }
 
         private void CreateNewVM_Click(object sender, RoutedEventArgs e)
@@ -83,13 +85,25 @@ namespace Riverside.Labware.UserControls
 
         private void HideFolderView_Click(object sender, RoutedEventArgs e)
         {
+            // Methods removed as this will be removed in a later version
+
+            /*
             FolderView.Visibility = Visibility.Collapsed;
             TabsView.Margin = new Thickness(0, 0, 0, 0);
             ShowHideFolderView.IsChecked = false;
+            */
         }
+
+        /*
+        public static void UncheckShowHideLibrary()
+        {
+            ShowHideLibrary.IsChecked = false;
+        } */
 
         private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
         {
+            // Will be removed in a later version
+            /*
             if (FolderView.Visibility == Visibility.Visible)
             {
                 MainWindow.lFolderView.Visibility = Visibility.Collapsed;
@@ -101,7 +115,7 @@ namespace Riverside.Labware.UserControls
                 FolderView.Visibility = Visibility.Visible;
                 TabsView.Margin = new Thickness(0, 0, 0, 152);
                 ShowHideFolderView.IsChecked = true;
-            }
+            } */
         }
     }
 }
