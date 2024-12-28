@@ -8,10 +8,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400"
     mc:Ignorable="d">
-    <Grid
-        x:Name="Toolbar"
-        Height="48"
-        VerticalAlignment="Top">
+    <Grid>
         <StackPanel
             x:Name="MenuStack"
             HorizontalAlignment="Left"

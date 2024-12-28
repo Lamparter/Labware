@@ -10,7 +10,7 @@ namespace Riverside.Labware.UserControls
     {
         public MenuBar()
         {
-            InitializeComponent();
+            // InitializeComponent();
 
             // ShowHideLibrary will be removed in a later version
             /*
@@ -63,12 +63,6 @@ namespace Riverside.Labware.UserControls
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             App.m_window.Close();
-        }
-
-        private void MessageLog_Click(object sender, RoutedEventArgs e)
-        {
-            MessageLogDialog logWin = new();
-            MainWindow.CreateModalWindow(App.m_window, logWin, true, true);
         }
 
         private void VMMessageLog_Click(object sender, RoutedEventArgs e)

@@ -51,7 +51,7 @@ namespace Riverside.Labware
             SetTitleBar(AppTitleBar);
             AppWindow.TitleBar.PreferredHeightOption = TitleBarHeightOption.Tall;
 
-            FolderView.Visibility = Visibility.Collapsed;
+            //FolderView.Visibility = Visibility.Collapsed;
             TabsGrid.Margin = new Thickness(212, 48, 0, 32);
 
             overlappedPresenter = AppWindow.Presenter as OverlappedPresenter;
@@ -286,9 +286,14 @@ namespace Riverside.Labware
         {
             LibraryPanel.Visibility = Visibility.Collapsed;
             TabsGrid.Margin = new Thickness(0, 48, 0, 32);
-            FolderView.Margin = new Thickness(0, 0, 0, 32);
+            //FolderView.Margin = new Thickness(0, 0, 0, 32);
 
             // MenuBar.UncheckShowHideLibrary();
+        }
+        private void MessageLog_Click(object sender, RoutedEventArgs e)
+        {
+            MessageLogDialog logWin = new();
+            MainWindow.CreateModalWindow(App.m_window, logWin, true, true);
         }
     }
 }

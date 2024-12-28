@@ -96,7 +96,17 @@
                 VerticalAlignment="Top"
                 Background="Transparent">
                 <winex:TitleBar.Header>
-                    <uc:MenuBar x:Name="MenuBar" />
+                    <Grid
+                        x:Name="Toolbar"
+                        Height="48"
+                        VerticalAlignment="Top">
+                        <StackPanel
+                            x:Name="MenuStack"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                            <uc:MenuBar x:Name="MenuBar" />
+                        </StackPanel>
+                    </Grid>
                 </winex:TitleBar.Header>
             </winex:TitleBar>
             <Grid
@@ -223,7 +233,7 @@
                     </TabView.TabItems>
                 </TabView>
             </Grid>
-            <Grid
+            <!--<Grid
                 x:Name="FolderView"
                 Height="147"
                 Margin="202,0,0,32"
@@ -294,8 +304,8 @@
                         </FlyoutBase.AttachedFlyout>
                     </Button>
                 </StackPanel>
-            </Grid>
-            <Border
+            </Grid>-->
+            <!--"<Border
                 Height="32"
                 VerticalAlignment="Bottom"
                 BackgroundSizing="OuterBorderEdge"
@@ -342,7 +352,7 @@
                         </FlyoutBase.AttachedFlyout>
                     </Button>
                 </StackPanel>
-            </Border>
+            </Border>-->
         </Grid>
     </Page>
 </winex:WindowEx>
