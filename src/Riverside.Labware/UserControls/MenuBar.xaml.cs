@@ -3,16 +3,14 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml;
 using Riverside.Labware.Dialogs;
-using Microsoft.UI.Windowing;
 
 namespace Riverside.Labware.UserControls
 {
     public partial class MenuBar : UserControl
     {
-        private readonly MainWindow mainWindow = (MainWindow)App.m_window;
         public MenuBar()
         {
-            InitializeComponent();
+            // InitializeComponent();
 
             // ShowHideLibrary will be removed in a later version
             /*
@@ -112,34 +110,6 @@ namespace Riverside.Labware.UserControls
                 TabsView.Margin = new Thickness(0, 0, 0, 152);
                 ShowHideFolderView.IsChecked = true;
             } */
-        }
-
-        internal void OnSizeChanged(object sender, WindowSizeChangedEventArgs args)
-        {
-            if (TitlebarMenuFlyout.IsOpen)
-            {
-                TitlebarMenuFlyout.Hide();
-            }
-            if (overlappedPresenter is not null)
-            {
-                IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
-            }
-        }
-
-        internal void OnAppWindowChanged(AppWindow sender, AppWindowChangedEventArgs args)
-        {
-            if (args.DidPositionChange)
-            {
-                if (TitlebarMenuFlyout.IsOpen)
-                {
-                    TitlebarMenuFlyout.Hide();
-                }
-
-                if (overlappedPresenter is not null)
-                {
-                    IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
-                }
-            }
         }
     }
 }

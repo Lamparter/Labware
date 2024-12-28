@@ -75,12 +75,12 @@ namespace Riverside.Labware
 
             SizeChanged += OnSizeChanged;
         }
-        internal void OnActualThemeChanged(FrameworkElement sender, object args)
+        private void OnActualThemeChanged(FrameworkElement sender, object args)
         {
             SetTitleBarTheme(sender.ActualTheme);
             SetClassicMenuTheme(sender.ActualTheme);
         }
-        internal void SetTitleBarTheme(ElementTheme theme)
+        private void SetTitleBarTheme(ElementTheme theme)
         {
             AppWindowTitleBar titleBar = AppWindow.TitleBar;
 
@@ -125,12 +125,38 @@ namespace Riverside.Labware
         }
         private const string MaximizeGlyph = "\uE923";
         private const string RestoreGlyph = "\uE922";
+        private void OnSizeChanged(object sender, WindowSizeChangedEventArgs args)
+        {
+            if (TitlebarMenuFlyout.IsOpen)
+            {
+                TitlebarMenuFlyout.Hide();
+            }
+            if (overlappedPresenter is not null)
+            {
+                IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
+            }
+        }
+        private void OnAppWindowChanged(AppWindow sender, AppWindowChangedEventArgs args)
+        {
+            if (args.DidPositionChange)
+            {
+                if (TitlebarMenuFlyout.IsOpen)
+                {
+                    TitlebarMenuFlyout.Hide();
+                }
 
-        internal void OnRestoreClicked(object sender, RoutedEventArgs args)
+                if (overlappedPresenter is not null)
+                {
+                    IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
+                }
+            }
+        }
+
+        private void OnRestoreClicked(object sender, RoutedEventArgs args)
         {
             overlappedPresenter.Restore();
         }
-        internal void OnMoveClicked(object sender, RoutedEventArgs args)
+        private void OnMoveClicked(object sender, RoutedEventArgs args)
         {
             MenuFlyoutItem menuItem = sender as MenuFlyoutItem;
             if (menuItem.Tag is not null)
@@ -139,7 +165,7 @@ namespace Riverside.Labware
                 _ = User32Library.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
             }
         }
-        internal void OnSizeClicked(object sender, RoutedEventArgs args)
+        private void OnSizeClicked(object sender, RoutedEventArgs args)
         {
             MenuFlyoutItem menuItem = sender as MenuFlyoutItem;
             if (menuItem.Tag is not null)
@@ -148,15 +174,15 @@ namespace Riverside.Labware
                 _ = User32Library.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF000, 0);
             }
         }
-        internal void OnMinimizeClicked(object sender, RoutedEventArgs args)
+        private void OnMinimizeClicked(object sender, RoutedEventArgs args)
         {
             overlappedPresenter.Minimize();
         }
-        internal void OnMaximizeClicked(object sender, RoutedEventArgs args)
+        private void OnMaximizeClicked(object sender, RoutedEventArgs args)
         {
             overlappedPresenter.Maximize();
         }
-        internal void OnCloseClicked(object sender, RoutedEventArgs args)
+        private void OnCloseClicked(object sender, RoutedEventArgs args)
         {
             Application.Current.Exit();
         }
@@ -256,7 +282,7 @@ namespace Riverside.Labware
 
         [DllImport("User32.dll", CharSet = CharSet.Auto, EntryPoint = "SetWindowLongPtr")]
         private static extern nint SetWindowLongPtr64(nint hWnd, int nIndex, nint dwNewLong);
-        internal void HideLibrary_Click(object sender, RoutedEventArgs e)
+        private void HideLibrary_Click(object sender, RoutedEventArgs e)
         {
             LibraryPanel.Visibility = Visibility.Collapsed;
             TabsGrid.Margin = new Thickness(0, 48, 0, 32);
@@ -264,7 +290,7 @@ namespace Riverside.Labware
 
             // MenuBar.UncheckShowHideLibrary();
         }
-        internal void MessageLog_Click(object sender, RoutedEventArgs e)
+        private void MessageLog_Click(object sender, RoutedEventArgs e)
         {
             MessageLogDialog logWin = new();
             MainWindow.CreateModalWindow(App.m_window, logWin, true, true);
