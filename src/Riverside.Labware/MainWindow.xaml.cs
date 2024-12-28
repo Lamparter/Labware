@@ -54,11 +54,6 @@ namespace Riverside.Labware
             FolderView.Visibility = Visibility.Collapsed;
             TabsGrid.Margin = new Thickness(212, 48, 0, 32);
 
-            if (ShowHideLibrary.IsChecked == false)
-            {
-                ShowHideLibrary.IsChecked = true;
-            }
-
             overlappedPresenter = AppWindow.Presenter as OverlappedPresenter;
             IsWindowMaximized = overlappedPresenter.State is OverlappedPresenterState.Maximized;
             contentCoordinateConverter = ContentCoordinateConverter.CreateForWindowId(AppWindow.Id);
@@ -156,6 +151,7 @@ namespace Riverside.Labware
                 }
             }
         }
+
         private void OnRestoreClicked(object sender, RoutedEventArgs args)
         {
             overlappedPresenter.Restore();
@@ -296,97 +292,6 @@ namespace Riverside.Labware
             {
                 ShowHideLibrary.IsChecked = false;
             }
-        }
-        private void CreateNewVM_Click(object sender, RoutedEventArgs e)
-        {
-            VMCreationDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-            App.currentWizardWin = logWin;
-        }
-        private void NewWindow_Click(object sender, RoutedEventArgs e)
-        {
-            m_window = new MainWindow();
-            m_window.Activate();
-        }
-        private void Open_Click(object sender, RoutedEventArgs e)
-        {
-            FeatureNotAvailableDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-        }
-        private void ShowHideLibrary_Click(object sender, RoutedEventArgs e)
-        {
-            if (LibraryPanel.Visibility == Visibility.Visible)
-            {
-                LibraryPanel.Visibility = Visibility.Collapsed;
-                TabsGrid.Margin = new Thickness(0, 48, 0, 32);
-                FolderView.Margin = new Thickness(0, 0, 0, 32);
-                ShowHideLibrary.IsChecked = false;
-            }
-            else
-            {
-                LibraryPanel.Visibility = Visibility.Visible;
-                TabsGrid.Margin = new Thickness(212, 48, 0, 32);
-                FolderView.Margin = new Thickness(202, 0, 0, 32);
-                ShowHideLibrary.IsChecked = true;
-            }
-        }
-        private void HideFolderView_Click(object sender, RoutedEventArgs e)
-        {
-            FolderView.Visibility = Visibility.Collapsed;
-            TabsView.Margin = new Thickness(0, 0, 0, 0);
-            ShowHideFolderView.IsChecked = false;
-        }
-        private void ShowHideFolderView_Click(object sender, RoutedEventArgs e)
-        {
-            if (FolderView.Visibility == Visibility.Visible)
-            {
-                FolderView.Visibility = Visibility.Collapsed;
-                TabsView.Margin = new Thickness(0, 0, 0, 0);
-                ShowHideFolderView.IsChecked = false;
-            }
-            else
-            {
-                FolderView.Visibility = Visibility.Visible;
-                TabsView.Margin = new Thickness(0, 0, 0, 152);
-                ShowHideFolderView.IsChecked = true;
-            }
-        }
-        private void VMSettings_Click(object sender, RoutedEventArgs e)
-        {
-            VMSettingsDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-        }
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-            AboutDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-        }
-        private void Button_RightTapped(object sender, RightTappedRoutedEventArgs e)
-        {
-            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-        private void Button_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        }
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-        private void MessageLog_Click(object sender, RoutedEventArgs e)
-        {
-            MessageLogDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-        }
-        private void VMMessageLog_Click(object sender, RoutedEventArgs e)
-        {
-            MessageLogDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
-        }
-        private void Preferences_Click(object sender, RoutedEventArgs e)
-        {
-            SettingsDialog logWin = new();
-            CreateModalWindow(App.m_window, logWin, true, true);
         }
     }
 }
