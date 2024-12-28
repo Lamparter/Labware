@@ -96,17 +96,7 @@
                 VerticalAlignment="Top"
                 Background="Transparent">
                 <winex:TitleBar.Header>
-                    <Grid
-                        x:Name="Toolbar"
-                        Height="48"
-                        VerticalAlignment="Top">
-                        <StackPanel
-                            x:Name="MenuStack"
-                            HorizontalAlignment="Left"
-                            Orientation="Horizontal">
-                            <uc:MenuBar x:Name="MenuBar" />
-                        </StackPanel>
-                    </Grid>
+                    <uc:MenuBar x:Name="MenuBar" />
                 </winex:TitleBar.Header>
             </winex:TitleBar>
             <Grid
