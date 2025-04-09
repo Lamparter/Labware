@@ -32,6 +32,4 @@ To build Labware for development, open the `Labware.sln` item in Visual Studio. 
 
 ---
 
-<!--  TODO: Update this screenshot  -->
-
-![VMsApp screenshot](https://github.com/user-attachments/assets/67aab750-6c01-4ef2-96c4-c28b88b1647c)
+![Labware](https://github.com/user-attachments/assets/34d6030f-5d11-4a8e-9c6d-986a4b1707d9)
