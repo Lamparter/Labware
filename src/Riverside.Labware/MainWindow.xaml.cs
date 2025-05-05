@@ -7,9 +7,9 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Input;
 using Riverside.Labware.Dialogs;
 using Riverside.Labware.Helpers;
-using Riverside.Labware.Core.PInvoke.Comctl32;
-using Riverside.Labware.Core.PInvoke.User32;
-using Riverside.Labware.Core.PInvoke.Uxtheme;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.UI.Shell;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -66,14 +66,14 @@ namespace Riverside.Labware
             SetClassicMenuTheme((Content as FrameworkElement).ActualTheme);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nint.Zero);
+            _ = PInvoke.SetWindowSubclass((HWND)(nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nuint.Zero);
 
-            nint inputNonClientPointerSourceHandle = User32Library.FindWindowEx((nint)AppWindow.Id.Value, nint.Zero, "InputNonClientPointerSource", null);
+            nint inputNonClientPointerSourceHandle = PInvoke.FindWindowEx((HWND)(nint)AppWindow.Id.Value, (HWND)nint.Zero, "InputNonClientPointerSource", null);
 
             if (inputNonClientPointerSourceHandle != nint.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nint.Zero);
+                _ = PInvoke.SetWindowSubclass((HWND)(nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nuint.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -119,14 +119,14 @@ namespace Riverside.Labware
         {
             if (theme is ElementTheme.Light)
             {
-                UxthemeLibrary.SetPreferredAppMode(PreferredAppMode.ForceLight);
+                PInvoke.SetPreferredAppMode(PreferredAppMode.ForceLight);
             }
             else
             {
                 UxthemeLibrary.SetPreferredAppMode(PreferredAppMode.ForceDark);
             }
 
-            UxthemeLibrary.FlushMenuThemes();
+            PInvoke.FlushMenuThemes();
         }
         private const string MaximizeGlyph = "\uE923";
         private const string RestoreGlyph = "\uE922";

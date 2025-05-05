@@ -4,11 +4,12 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Media.Animation;
+using Windows.Win32.Foundation;
 using Riverside.Labware.Helpers;
-using Riverside.Labware.Core.PInvoke.Comctl32;
-using Riverside.Labware.Core.PInvoke.User32;
 using Riverside.Labware.Views.VirtualMachine.Settings;
+using Windows.Win32;
 using System;
+using Windows.Win32.UI.Shell;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using Windows.Foundation;
@@ -64,14 +65,14 @@ namespace Riverside.Labware.Dialogs
             contentCoordinateConverter = ContentCoordinateConverter.CreateForWindowId(AppWindow.Id);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nint.Zero);
+            _ = PInvoke.SetWindowSubclass((HWND)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nint.Zero);
 
-            nint inputNonClientPointerSourceHandle = User32Library.FindWindowEx((nint)AppWindow.Id.Value, nint.Zero, "InputNonClientPointerSource", null);
+            nint inputNonClientPointerSourceHandle = PInvoke.FindWindowEx((nint)AppWindow.Id.Value, nint.Zero, "InputNonClientPointerSource", null);
 
             if (inputNonClientPointerSourceHandle != nint.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nint.Zero);
+                _ = PInvoke.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nint.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -137,6 +138,7 @@ namespace Riverside.Labware.Dialogs
         {
             Close();
         }
+
         private nint MainWindowSubClassProc(nint hWnd, WindowMessage Msg, UIntPtr wParam, nint lParam, uint uIdSubclass, nint dwRefData)
         {
             if (Msg is WindowMessage.WM_SYSCOMMAND)

@@ -4,8 +4,10 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Riverside.Labware.Helpers;
-using Riverside.Labware.Core.PInvoke.Comctl32;
-using Riverside.Labware.Core.PInvoke.User32;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.UI.Shell;
+using Windows.Win32.UI.WindowsAndMessaging;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -62,14 +64,14 @@ namespace Riverside.Labware.Dialogs
             contentCoordinateConverter = ContentCoordinateConverter.CreateForWindowId(AppWindow.Id);
 
             mainWindowSubClassProc = new SUBCLASSPROC(MainWindowSubClassProc);
-            _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nint.Zero);
+            _ = PInvoke.SetWindowSubclass((HWND)(nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(mainWindowSubClassProc), 0, nuint.Zero);
 
-            nint inputNonClientPointerSourceHandle = User32Library.FindWindowEx((nint)AppWindow.Id.Value, nint.Zero, "InputNonClientPointerSource", null);
+            nint inputNonClientPointerSourceHandle = PInvoke.FindWindowEx((HWND)(nint)AppWindow.Id.Value, (HWND)nint.Zero, "InputNonClientPointerSource", null);
 
             if (inputNonClientPointerSourceHandle != nint.Zero)
             {
                 inputNonClientPointerSourceSubClassProc = new SUBCLASSPROC(InputNonClientPointerSourceSubClassProc);
-                _ = Comctl32Library.SetWindowSubclass((nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nint.Zero);
+                _ = PInvoke.SetWindowSubclass((HWND)(nint)AppWindow.Id.Value, Marshal.GetFunctionPointerForDelegate(inputNonClientPointerSourceSubClassProc), 0, nuint.Zero);
             }
 
             AppWindow.Changed += OnAppWindowChanged;
@@ -111,7 +113,7 @@ namespace Riverside.Labware.Dialogs
             if (menuItem.Tag is not null)
             {
                 ((MenuFlyout)menuItem.Tag).Hide();
-                _ = User32Library.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
+                _ = PInvoke.SendMessage((nint)AppWindow.Id.Value, WindowMessage.WM_SYSCOMMAND, 0xF010, 0);
             }
         }
         private void OnSizeClicked(object sender, RoutedEventArgs args)

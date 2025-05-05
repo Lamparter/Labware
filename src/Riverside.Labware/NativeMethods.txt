@@ -1,0 +1,5 @@
+SUBCLASSPROC
+SetWindowSubclass
+FindWindowEx
+DefSubclassProc
+SendMessage
